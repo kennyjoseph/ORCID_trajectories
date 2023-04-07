@@ -1,0 +1,1405 @@
+== Arts ==
+{{Main article|The arts}}
+
+=== Performing arts ===
+{{Main article|Performing arts|Outline of performing arts}}
+
+{{div col}}
+* [[Music]] ([[Outline of music|outline]])
+** [[Accompaniment|Accompanying]]
+** [[Chamber music]]
+** [[Church music]]
+** [[Conducting]]
+*** [[Choir|Choral conducting]]
+*** [[Orchestra|Orchestral conducting]]
+*** [[Concert band|Wind ensemble conducting]]
+** [[Early music]]
+** [[Jazz|Jazz studies]] ([[Outline of jazz|outline]])
+** [[Musical composition]]
+** [[Music education]]
+** [[Music history]]
+** [[Musicology]]
+*** [[Music history|Historical musicology]]
+*** [[Systematic musicology]]
+** [[Ethnomusicology]]
+** [[Music theory]]
+** [[Orchestra|Orchestral studies]]
+** [[Organology]]
+*** [[Organ (music)|Organ]] and [[Keyboard instrument|historical keyboards]]
+*** [[Piano]]
+*** [[String instrument|Strings]], [[harp]], [[oud]], and [[guitar]] ([[Outline of guitars|outline]])
+*** [[Singing]]
+*** [[Woodwind instrument|Woodwinds]], [[Brass instrument|brass]], and [[Percussion instrument|percussion]]
+** [[Sound recording and reproduction|Recording]]
+* [[Dance]] ([[Outline of dance|outline]])
+** [[Choreography]]
+** [[Dance notation]]
+** [[Ethnochoreology]]
+** [[History of dance]]
+* [[Television]] ([[Outline of television broadcasting|outline]])
+** [[Television studies]]
+* [[Theatre]] ([[Outline of theatre|outline]])
+** [[Acting]]
+** [[Theatre director|Directing]]
+** [[Dramaturgy]]
+** [[History of theater|History]]
+** [[Musical theatre]]
+** [[Playwrighting]]
+** [[Puppetry]]
+** [[Scenography]]
+** [[Scenic design|Stage design]]
+* [[Film studies|Film]] ([[Outline of film|outline]])
+** [[Animation]]
+** [[Film criticism]]
+** [[Filmmaking]]
+** [[Film theory]]
+** [[Live action]]
+{{div col end}}
+
+=== Visual arts ===
+{{Main article|Visual arts|Outline of the visual arts}}
+
+{{div col}}
+* [[Fine arts]]
+** [[Graphic arts]]
+*** [[Drawing]] ([[Outline of drawing and drawings|outline]])
+*** [[Painting]] ([[Outline of painting|outline]])
+*** [[Photography]] ([[Outline of photography|outline]])
+** [[Sculpture]] ([[Outline of sculpture|outline]])
+* [[Applied arts]]
+** [[Animation]]
+** [[Calligraphy]]
+** [[Decorative arts]]
+** [[Mixed media]]
+** [[Printmaking]]
+** [[Studio art]]
+** [[Architecture]] ([[Outline of architecture]])
+*** [[Interior architecture]]
+*** [[Landscape architecture]]
+*** [[Architectural Analytics|Architectural analytics]]
+*** [[Historic preservation]]
+*** [[Interior design]] ([[interior architecture]])
+*** [[Landscape architecture]] ([[landscape planning]])
+*** [[Landscape design]]
+*** [[Technical drawing]]
+*** [[Information architecture]]
+*** [[Urban planning]] ([[urban design]])
+** [[Design|Outline of design]]
+*** [[Fashion design]]
+*** [[Textile design]]
+*** [[User experience design]]
+**** [[Interaction design]] 
+**** [[User experience evaluation]]
+**** [[User interface design]]
+*** [[Visual communication]]
+**** [[Graphic design]]
+**** [[Typography]]
+***** [[Type design]]
+*** [[Industrial design]] ([[product design]])
+**** [[Ergonomics]] ([[Outline of ergonomics|outline]])
+**** [[Game design]]
+**** [[Toy|Toy and amusement design]]
+{{div col end}}
+
+== Humanities ==
+{{main article|Humanities|Outline of the humanities}}
+
+=== Geography ===
+{{Main article|Geography|Outline of geography|Human geography}}
+
+{{div col}}
+* [[Cartography]] ([[Outline of cartography|outline]])
+* [[Cultural geography]]
+** [[Feminist geography]]
+* [[Economic geography]]
+** [[Development geography]]
+* [[Historical geography]]
+* [[Political geography]] & [[geopolitics]]
+* [[Population geography]]
+** [[Military geography]]
+** [[Strategic geography]]
+* [[Social geography]]
+** [[Behavioral geography]]
+** [[Children's geographies]]
+** [[Health geography]]
+** [[Tourism geography]]
+* [[Time geography]]
+* [[Urban geography]]
+{{div col end}}
+
+=== History ===
+{{Main article|History|Outline of history}}
+
+{{div col}}
+* [[African history]]
+* [[American history]]
+* [[Ancient history]]
+** [[Ancient Greece|Ancient Greek history]] ([[Outline of ancient Greece#General history of ancient Greece|outline]])
+** [[Ancient Rome|Ancient Roman history]] ([[Outline of ancient Rome|outline]])
+* [[History of Asia|Asian history]]
+** [[History of China|Chinese history]]
+** [[History of India|Indian history]] ([[Outline of ancient India|outline]])
+** [[History of Indonesia|Indonesian history]]
+** [[History of Iran|Iranian history]]
+* [[History of Australia|Australian history]]
+* [[Economic history of the world|Economic history]]
+* [[Environmental history]]
+* [[History of Europe|European history]]
+* [[Intellectual history]]
+* [[History of Latin America|Latin American history]]
+* [[Modern history]]
+* [[History of political thought|Political history]]
+* [[Pre-Columbian era]]
+* [[History of Russia|Russian history]]
+* [[History of Science|Scientific history]]
+* [[History of Technology|Technological history]]
+* [[World history]]
+{{div col end}}
+
+=== Languages and literature ===
+{{Main article|Language|Literature|Outline of literature}}
+
+{{div col}}
+* [[Linguistics]] ([[Outline of linguistics]])
+** [[Applied linguistics]]
+** [[Composition studies]]
+** [[Computational linguistics]]
+** [[Discourse analysis]]
+** [[English studies]]
+** [[Etymology]]
+** [[Grammar]]
+** [[Historical linguistics]]
+** [[History of linguistics]]
+** [[Interlinguistics]]
+** [[Lexicology]]
+** [[Linguistic typology]]
+** [[Morphology (linguistics)]]
+** [[Natural language processing]]
+** [[Philology]]
+** [[Phonetics]]
+** [[Phonology]]
+** [[Pragmatics]]
+** [[Psycholinguistics]]
+** [[Rhetoric]]
+** [[Semantics]]
+** [[Semiotics]] ([[Outline of semiotics|outline]])
+** [[Sociolinguistics]]
+** [[Syntax]]
+** [[Usage]]
+** [[Word usage]]
+* [[Comparative literature]]
+* [[Creative writing]]
+** [[Fiction]] ([[Outline of fiction|outline]])
+** [[Non-fiction]]
+* [[English literature]]
+* [[History of literature]]
+** [[Medieval literature]]
+** [[Post-colonial literature]]
+** [[Post-modern literature]]
+* [[Literary theory]]
+** [[Critical theory]] ([[Outline of critical theory|outline]])
+** [[Literary criticism]]
+** [[Poetics]]
+** [[Rhetoric]]
+* [[Poetry]]
+* [[World literature]]
+** [[African-American literature]]
+** [[American literature]]
+** [[British literature]]
+{{div col end}}
+
+=== Philosophy ===
+{{Main article|Philosophy|Outline of philosophy}}
+
+{{div col}}
+* [[Aesthetics]] ([[Outline of aesthetics|outline]]) / [[Philosophy of Art]]
+* [[Philosophy#Applied philosophy|Applied philosophy]]
+** [[Philosophy of education]]
+** [[Philosophy of engineering]]
+** [[Philosophy of history]]
+** [[Philosophy of language]]
+** [[Philosophy of law]]
+** [[Philosophy of mathematics]]
+** [[Philosophy of music]]
+** [[Philosophy of religion]]
+** [[Philosophy of science]]
+*** [[Philosophy of biology]]
+*** [[Philosophy of chemistry]]
+*** [[Philosophy and economics|Philosophy of economics]]
+*** [[Philosophy of physics]]
+*** [[Philosophy of psychology]]
+*** [[Philosophy of social science]]
+** [[Systems philosophy]]
+* [[Epistemology]] ([[Outline of epistemology|outline]])
+** [[Theory of justification|Justification]]
+** [[List of fallacies#Informal fallacies|Reasoning errors]]
+* [[Ethics]] ([[Outline of ethics|outline]])
+** [[Applied ethics]]
+*** [[Animal rights]]
+*** [[Bioethics]]
+*** [[Environmental ethics]]
+** [[Meta-ethics]]
+** [[Moral psychology]], [[Descriptive ethics]], [[Value theory]]
+** [[Normative ethics]]
+*** [[Virtue ethics]]
+* [[History of philosophy]]
+** [[Ancient philosophy]]
+** [[Contemporary philosophy]]
+** [[Medieval philosophy]]
+*** [[Humanism]] ([[Outline of humanism|outline]])
+*** [[Scholasticism]]
+** [[Modern philosophy]]
+* [[Logic]] ([[Outline of logic|outline]])
+** [[Mathematical logic]]
+** [[Philosophical logic]]
+* [[Meta-philosophy]]
+* [[Metaphysics]] ([[Outline of metaphysics|outline]])
+** [[Action (philosophy)|Philosophy of Action]]
+** [[Determinism]] and [[Free will]]
+** [[Ontology]]
+** [[Philosophy of mind]]
+*** [[Pain (philosophy)|Philosophy of pain]]
+*** [[Philosophy of artificial intelligence]]
+*** [[Philosophy of perception]]
+** [[Philosophy of space and time]]
+** [[Teleology]]
+** [[Theism]] and [[Atheism]]
+* [[Philosophical movement|Philosophical traditions and schools]]
+** [[African philosophy]]
+** [[Analytic philosophy]]
+** [[Aristotelianism]]
+** [[Continental philosophy]]
+** [[Eastern philosophy]]
+** [[Feminist philosophy]]
+** [[Platonism]]
+* [[Social philosophy]] and [[political philosophy]]
+** [[Anarchism]] ([[Outline of anarchism|outline]])
+** [[Feminist philosophy]]
+** [[Libertarianism]] ([[Outline of libertarianism|outline]])
+** [[Marxism]]
+{{div col end}}
+
+=== Theology ===
+{{Main article|Theology|Outline of theology}}
+
+* [[Biblical studies]]
+* [[History of the Church]]{{dn|date=April 2017}}
+* [[Religious studies]]
+* [[Biblical Hebrew]], [[Biblical Greek]], [[Aramaic]]
+
+== Social sciences ==
+{{Main article|Social science|Outline of social science}}
+
+=== Anthropology ===
+{{Main article|Anthropology}}
+
+* [[Biological anthropology]]
+* [[Linguistic anthropology]]
+* [[Cultural Anthropology]]
+* [[Social Anthropology]]
+
+=== Economics ===
+{{Main article|Economics|Outline of economics}}
+
+{{div col}}
+* [[Agricultural economics]]
+* [[Anarchist economics]]
+* [[Applied economics]]
+* [[Behavioural economics]]
+* [[Bioeconomics (biophysical)|Bioeconomics]]
+* [[Complexity economics]]
+* [[Computational economics]]
+* [[Consumer economics]]
+* [[Development economics]]
+* [[Ecological economics]]
+* [[Econometrics]]
+* [[Economic geography]]
+* [[Economic history]]
+* [[Economic sociology]]
+* [[Economic systems]]
+* [[Energy economics]]
+* [[Entrepreneurial economics]]
+* [[Environmental economics]]
+* [[Evolutionary economics]]
+* [[Experimental economics]]
+* [[Feminist economics]]
+* [[Financial econometrics]]
+* [[Financial economics]]
+* [[Green economics]]
+* [[Economic growth|Growth economics]]
+* [[Human development theory]]
+* [[Industrial organization]]
+* [[Information economics]]
+* [[Institutional economics]]
+* [[International economics]]
+* [[Islamic economics]]
+* [[Labor economics]]
+* [[Law and economics]]
+* [[Macroeconomics]]
+* [[Managerial economics]]
+* [[Marxian economics]]
+* [[Mathematical economics]]
+* [[Microeconomics]]
+* [[Monetary economics]]
+* [[Neuroeconomics]]
+* [[Participatory economics]]
+* [[Political economy]]
+* [[Public economics]]
+* [[Public finance]]
+* [[Real estate economics]]
+* [[Resource economics]]
+* [[Social choice theory]]
+* [[Socialist economics]]
+* [[Socioeconomics]]
+* [[Transport economics]]
+* [[Welfare economics]]
+{{div col end}}
+
+=== Law ===
+{{Main article|Law|Outline of law}}
+
+{{div col}}
+* [[Administrative law]]
+* [[Canon law]]
+* [[Civil law (common law)|Civil law]]
+** [[Admiralty law]]
+** [[Animal law]]/[[Animal rights]]
+** [[Civil procedure]]
+** [[Common law]]
+** [[Contract law]]
+** [[Corporations]]
+** [[Environmental law]]
+** [[Family law]]
+** [[Federal law]]
+** [[International law]]
+*** [[Public international law]]
+*** [[Supranational law]]
+** [[Labor law]]
+** [[Paralegal|Paralegal studies]]
+** [[Property law]]
+** [[Tax law]]
+** [[Tort law]] ([[Outline of tort law|outline]])
+* [[Comparative law]]
+* [[Competition law]]
+* [[Constitutional law]]
+* [[Criminal law]]
+** [[Criminal justice]] ([[Outline of criminal justice|outline]])
+** [[Criminal procedure]]
+*** [[Forensic science]] ([[Outline of forensic science|outline]])
+*** [[Police science]]
+* [[Sharia|Islamic law]]
+* [[Jewish law]] ([[Outline of Jewish law|outline]])
+* [[Jurisprudence]] (Philosophy of Law)
+* [[Legal management]]
+** [[Business law]]
+** [[Corporate law]]
+** [[Mercantile law]]
+* [[Procedural law]]
+* [[Substantive law]]
+{{div col end}}
+
+=== Political science ===
+{{Main article|Politics|Political science|Outline of political science}}
+
+{{div col}}
+* [[Politics of the United States|American politics]]
+* [[Politics of Canada|Canadian politics]]
+* [[Civics]]
+* [[Comparative politics]]
+* [[European studies]]
+* [[Geopolitics]] (Political geography)
+* [[International relations]]
+* [[International organization]]s
+* [[Nationalism studies]]
+* [[Peace and conflict studies]]
+* [[Policy studies]]
+* [[Theories of political behavior|Political behavior]]
+* [[Political culture]]
+* [[Political economy]]
+* [[Political history]]
+* [[Political philosophy]]
+* [[Psephology]]
+* [[Social choice theory]]
+{{div col end}}
+
+=== Psychology ===
+{{Main article|Psychology|Outline of psychology|List of psychology disciplines}}
+{{See also| Psychology#Subfields| l1=Branches of psychology| Cognitive science| Affective science| Behavioural sciences}}
+
+{{div col}}
+* [[Abnormal psychology]]
+* [[Applied psychology]]
+* [[Asian psychology]]
+* [[Biological psychology]]
+* [[Black psychology]]
+* [[Clinical neuropsychology]]
+* [[Clinical psychology]]
+* [[Cognitive psychology]]
+* [[Community psychology]]
+* [[Comparative psychology]]
+* [[Conservation psychology]]
+* [[Consumer psychology]]
+* [[Counseling psychology]]
+* [[Criminal psychology]]
+* [[Cultural psychology]]
+* [[Developmental psychology]]
+* [[Differential psychology]]
+* [[Ecological psychology]]
+* [[Educational psychology]]
+* [[Environmental psychology]]
+* [[Evolutionary psychology]]
+* [[Experimental psychology]]
+* [[Group dynamics|Group psychology]]
+* [[Journal of Family Psychology|Family psychology]]
+* [[Feminine psychology]]
+* [[Forensic developmental psychology]]
+* [[Forensic psychology]]
+* [[Health psychology]]
+* [[Humanistic psychology]]
+* [[Indigenous psychology]]
+* [[Legal psychology]]
+* [[Masculine psychology]]
+* [[Mathematical psychology]]
+* [[Media psychology]]
+* [[Medical psychology]]
+* [[Military psychology]]
+* [[Moral psychology]] and [[Descriptive ethics]]
+* [[Music psychology]]
+* [[Neuropsychology]]
+* [[Occupational health psychology]]
+* [[Occupational psychology]]
+* [[Industrial and organizational psychology|Organizational psychology]]
+* [[Parapsychology]] ([[Outline of parapsychology|outline]])
+* [[Pediatric psychology]]
+* [[Pedology (children study)]]
+* [[Personality psychology]]
+* [[Phenomenology (psychology)|Phenomenology]]
+* [[Political psychology]]
+* [[Positive psychology]]
+* [[Psychoanalysis]]
+* [[Psychobiology]]
+* [[Psychology of religion]]
+* [[Psychometrics]]
+* [[Psychopathology]]
+** [[Child psychopathology]]
+* [[Psychophysics]]
+* [[Quantitative psychology]]
+* [[Rehabilitation Psychology (journal)|Rehabilitation psychology]]
+* [[School psychology]]
+* [[Social psychology]]
+* [[Sport psychology]]
+* [[Traffic psychology]]
+* [[Transpersonal psychology]]
+{{div col end}}
+
+=== Sociology ===
+{{Main article|Sociology|Outline of sociology}}
+
+{{div col}}
+* [[Analytical sociology]]
+* [[Applied sociology]]
+** [[Leisure studies]]
+** [[Political sociology]]
+** [[Public sociology]]
+** [[Social engineering (political science)|Social engineering]]
+* [[Architectural sociology]]
+* [[Area studies]]
+** [[African studies]]
+** [[American studies]]
+*** [[Appalachian studies]]
+*** [[Canadian studies]]
+*** [[Latin American studies]]
+** [[Asian studies]]
+*** [[Central Asian studies]]
+*** [[East Asian studies]]
+*** [[Indology]]
+*** [[Iranian studies]]
+*** [[Japanese studies]]
+*** [[Korean studies]]
+*** [[Pakistan studies]]
+*** [[Sindhology]]
+*** [[Sinology]] ([[Outline of sinology|outline]])
+*** [[Southeast Asian studies]]
+*** [[Thai studies]]
+** [[Australian studies]]
+** [[European studies]]
+*** [[Celtic studies]]
+*** [[German studies]]
+*** [[Scandinavian studies]]
+*** [[Slavic studies]]
+** [[Middle Eastern studies]]
+* [[Collective behavior|Behavioral sociology]]
+* [[Chinese sociology]]
+* [[Collective behavior]]
+** [[Social movements]]
+* [[Community informatics]]
+** [[Social network analysis]]
+* [[Comparative sociology]]
+* [[Conflict theories|Conflict theory]]
+* [[Criminology]]/[[Criminal justice]] ([[Outline of criminal justice|outline]])
+* [[Critical management studies]]
+* [[Critical sociology]]
+* [[Cultural sociology]]
+* [[Cultural studies]]/[[ethnic studies]]
+** [[Africana studies]]
+** [[Cross-cultural studies]]
+** [[Culturology]]
+** [[Ethnology]]
+** [[Whiteness studies]]
+* [[Demography]]/[[Population]]
+* [[Digital sociology]]
+* [[Dramaturgical sociology]]
+* [[Economic sociology]]
+* [[Educational sociology]]
+* [[Empirical sociology]]
+* [[Environmental sociology]]
+* [[Evolutionary sociology]]
+* [[Feminist sociology]]
+* [[Figurational Sociology|Figurational sociology]]
+* [[Futures studies]] ([[Outline of futures studies|outline]])
+* [[Gender studies]]
+** [[Men's studies]]
+** [[Women's studies]]
+* [[Historical sociology]]
+* [[Human ecology]]
+* [[Humanistic sociology]]
+* [[Industrial sociology]]
+* [[Interactionism]]
+* [[Interpretive sociology]]
+** [[Ethnomethodology]]
+** [[Phenomenology (philosophy)|Phenomenology]]
+** [[Social constructionism]]
+** [[Symbolic interactionism]]
+* [[Jealousy sociology]]
+* [[Macrosociology]]
+* [[Marxist sociology]]
+* [[Mathematical sociology]]
+* [[Medical sociology]]
+* [[Mesosociology]]
+* [[Microsociology]]
+* [[Military sociology]]
+* [[Natural resource sociology]]
+* [[Organizational studies]]
+* [[Phenomenological sociology]]
+* [[Policy sociology]]
+* [[Polish sociology]]
+* [[Psychoanalytic sociology]]
+* [[Science studies]]/[[Science and technology studies]]
+* [[Sexology]]
+** [[Heterosexism]]
+** [[Human sexual activity|Human sexual behavior]]
+** [[Human sexuality]] ([[Outline of human sexuality|outline]])
+** [[Queer studies]]/[[Queer theory]]
+** [[Sex education]]
+* [[Social capital]]
+* [[Social change]]
+* [[Social conflict theory]]
+* [[Social control]]
+** [[Pure sociology]]
+* [[Social economy]]
+* [[Social philosophy]]
+* [[Social policy]]
+* [[Social psychology]]
+* [[Social research]]
+* [[Social stratification]]
+* [[Social theory]]
+* [[Social transformation]]
+** [[Computational sociology]]
+** [[Economic sociology]]/[[Socioeconomics]]
+*** [[Economic development]]
+*** [[Social development]]
+* [[Sociobiology]]
+* [[Sociocybernetics]]
+* [[Sociolinguistics]]
+* [[Sociological theory]]
+* [[Gerontology#Social gerontology|Sociology of aging]]
+* [[Rural sociology|Sociology of agriculture]]
+* [[Sociology of art]]
+* [[Sociological and cultural aspects of autism|Sociology of autism]]
+* [[Sociology of the family#Sociology of childhood|Sociology of childhood]]
+* [[Social conflict|Sociology of conflict]]
+* [[Sociology of culture]]
+* [[Sociology of the Internet|Sociology of cyberspace]]
+* [[Development theory|Sociology of development]]
+* [[Deviance (sociology)|Sociology of deviance]]
+* [[Sociology of disaster]]
+* [[Sociology of education]]
+* [[Sociology of emotions]]
+* [[Sociology of the family#Sociology of fatherhood|Sociology of fatherhood]]
+* [[Social studies of finance|Sociology of finance]]
+* [[Sociology of food]]
+* [[Sociology of gender]]
+* [[Theory of generations|Sociology of generations]]
+* [[World-systems theory|Sociology of globalization]]
+* [[Political sociology|Sociology of government]]
+* [[Sociology of health and illness]]
+* [[Sociology of human consciousness]]
+* [[Sociology of immigration]]
+* [[Sociology of knowledge]]
+* [[Sociology of language]]
+* [[Sociology of law]]
+* [[Sociology of leisure]]
+* [[Sociology of literature]]
+* [[Economic sociology|Sociology of markets]]
+* [[Sociology of the family#Sociology of marriage|Sociology of marriage]]
+* [[Sociology of the family#Sociology of motherhood|Sociology of motherhood]]
+* [[Sociomusicology|Sociology of music]]
+* [[Natural resource management|Sociology of natural resources]]
+* [[Organizational behavior|Sociology of organizations]]
+* [[Sociology of peace, war, and social conflict]]
+* [[Sociology of punishment]]
+* [[Sociology of race and ethnic relations]]
+* [[Sociology of religion]]
+* [[Risk|Sociology of risk]]
+* [[Sociology of scientific knowledge|Sociology of science]]
+* [[Sociology of scientific knowledge]]
+* [[Social change|Sociology of social change]]
+* [[Social movement|Sociology of social movements]]
+* [[Sociology of space]]
+* [[Sociology of sport]]
+* [[Science, technology and society|Sociology of technology]]
+* [[Sociology of terrorism]]
+* [[Sociology of the body]]
+* [[Sociology of the family]]
+* [[Sociology of the history of science]]
+* [[Sociology of the Internet]]
+* [[Industrial sociology|Sociology of work]]
+* [[Sociomusicology]]
+* [[Structural sociology]]
+* [[Theoretical sociology]]
+* [[Urban studies]] or [[Urban sociology]]/[[Rural sociology]]
+* [[Victimology]]
+* [[Visual sociology]]
+{{div col end}}
+
+== Natural sciences ==
+{{Main article|Science|Formal sciences|Natural science|Outline of natural science}}
+
+=== Biology ===
+{{Main article|List of life sciences}}
+{{See also|Biology|Outline of biology}}
+
+{{div col}}
+* [[Aerobiology]]
+* [[Anatomy]]
+** [[Comparative anatomy]]
+** [[Human anatomy]] ([[Outline of human anatomy|outline]])
+* [[Biochemistry]] ([[Outline of biochemistry|outline]])
+* [[Bioinformatics]]
+* [[Biophysics]] ([[Outline of biophysics|outline]])
+* [[Biotechnology]] ([[Outline of biotechnology|outline]])
+* [[Botany]] ([[Outline of botany|outline]])
+** [[Ethnobotany]]
+** [[Phycology]]
+* [[Cell biology]] ([[Outline of cell biology|outline]])
+* [[Chronobiology]]
+* [[Computational biology]]
+* [[Cryobiology]]
+* [[Developmental biology]]
+** [[Embryology]]
+** [[Teratology]]
+* [[Ecology]] ([[Outline of ecology|outline]])
+** [[Agroecology]]
+** [[Ethnoecology]]
+** [[Human ecology]]
+** [[Landscape ecology]]
+* [[Endocrinology]]
+* [[Evolutionary biology]]
+* [[Genetics]] ([[Outline of genetics|outline]])
+** [[Behavioural genetics]]
+** [[Molecular genetics]]
+** [[Population genetics]]
+* [[Histology]]
+* [[Human biology]]
+* [[Immunology]] ([[Outline of immunology|outline]])
+* [[Limnology]]
+* [[Linnaean taxonomy]]
+* [[Marine biology]]
+* [[Mathematical biology]]
+* [[Microbiology]]
+* [[Molecular biology]]
+* [[Mycology]]
+* [[Neuroscience]] ([[Outline of neuroscience|outline]])
+** [[Behavioral neuroscience]]
+* [[Nutrition]] ([[Outline of nutrition|outline]])
+* [[Paleobiology]]
+** [[Paleontology]]
+* [[Parasitology]]
+* [[Pathology]]
+** [[Anatomical pathology]] 
+** [[Clinical pathology]]
+** [[Dermatopathology]]
+** [[Forensic pathology]]
+** [[Hematopathology]] 
+** [[Histopathology]]
+** [[Molecular pathology]] 
+** [[Surgical pathology]]
+* [[Physiology]]
+** [[Human physiology]]
+*** [[Exercise physiology]]
+* [[Structural Biology]]
+* [[Systematics]] ([[Taxonomy (general)|Taxonomy]])
+* [[Systems biology]]
+* [[Virology]]
+** [[Molecular virology]]
+* [[Xenobiology]]
+* [[Zoology]] ([[Outline of zoology|outline]])
+** [[Animal communication]]s
+** [[Apiology]]
+** [[Arachnology]]
+** [[Carcinology]]
+** [[Cetology]]
+** [[Entomology]]
+*** [[Forensic entomology]]
+** [[Ethnozoology]]
+** [[Ethology]]
+** [[Helminthology]]
+** [[Herpetology]]
+** [[Ichthyology]] ([[Outline of fish|outline]])
+** [[Mammalogy]]
+** [[Malacology]]
+*** [[Conchology]]
+** [[Myrmecology]] ([[Outline of ants|outline]])
+** [[Nematology]]
+** [[Neuroethology]]
+** [[Oology]]
+** [[Ornithology]] ([[Outline of birds|outline]])
+** [[Planktology]]
+** [[Primatology]]
+** [[Zootomy]]
+** [[Zoosemiotics]]
+{{div col end}}
+
+=== Chemistry ===
+{{Main article|Chemistry|Outline of chemistry}}
+{{See also|Pure chemistry|l1=Branches of chemistry}}
+
+{{div col}}
+* [[Agrochemistry]]
+* [[Analytical chemistry]]
+* [[Astrochemistry]]
+* [[Atmospheric chemistry]]
+* [[Biochemistry]] ([[Outline of biochemistry|outline]])
+* [[Chemical biology]]
+* [[Chemical engineering]] ([[Outline of chemical engineering|outline]])
+* [[Cheminformatics]]
+* [[Computational chemistry]]
+* [[Cosmochemistry]]
+* [[Electrochemistry]]
+* [[Environmental chemistry]]
+* [[Femtochemistry]]
+* [[Flavor]]
+* [[Flow chemistry]]
+* [[Geochemistry]]
+* [[Green chemistry]]
+* [[Histochemistry]]
+* [[Hydrogenation]]
+* [[Immunochemistry]]
+* [[Inorganic chemistry]]
+* [[Marine chemistry]]
+* [[Mathematical chemistry]]
+* [[Mechanochemistry]]
+* [[Medicinal chemistry]]
+* [[Molecular biology]]
+* [[Molecular mechanics]]
+* [[Nanotechnology]]
+* [[Natural product chemistry]]
+* [[Neurochemistry]]
+* [[Oenology]]
+* [[Organic chemistry]] ([[Outline of organic chemistry|outline]])
+* [[Organometallic chemistry]]
+* [[Petrochemistry]]
+* [[Pharmacology]]
+* [[Photochemistry]] 
+* [[Physical chemistry]]
+* [[Physical organic chemistry]]
+* [[Phytochemistry]]
+* [[Polymer chemistry]]
+* [[Quantum chemistry]]
+* [[Radiochemistry]]
+* [[Solid-state chemistry]]
+* [[Sonochemistry]]
+* [[Supramolecular chemistry]]
+* [[Surface chemistry]]
+* [[Synthetic chemistry]]
+* [[Theoretical chemistry]]
+* [[Thermochemistry]]
+{{div col end}}
+
+=== Earth sciences ===
+{{Main article|Earth science|Outline of earth science}}
+{{See also|Earth science#Partial list of the major earth science topics|l1=Branches of earth sciences}}
+
+* [[Edaphology]]
+* [[Environmental chemistry]]
+* [[Environmental science]]
+* [[Gemology]]
+* [[Geochemistry]]
+* [[Geodesy]]
+* [[Geography]] ([[Outline of geography|outline]])
+* [[Geology]] ([[Outline of geology|outline]])
+* [[Geomorphology]]
+* [[Geophysics]] ([[Outline of geophysics|outline]])
+* [[Glaciology]]
+* [[Hydrogeology]]
+* [[Hydrology]] ([[Outline of hydrology|outline]])
+* [[Meteorology]] ([[Outline of meteorology|outline]])
+* [[Mineralogy]]
+* [[Oceanography]]
+* [[Paleontology]]
+** [[Paleobiology]]
+** [[Paleoecology]]
+* [[Pedology (soil study)|Pedology]]
+* [[Petrology]]
+* [[Sedimentology]]
+* [[Soil science]]
+* [[Speleology]]
+* [[Tectonics]]
+* [[Volcanology]]
+
+=== Space sciences ===
+{{Main article|Outline of space science}}
+* [[Astrobiology]]
+* [[Astronomy]] ([[Outline of astronomy|outline]])
+** [[Observational astronomy]]
+*** [[Gamma ray astronomy]]
+*** [[Infrared astronomy]]
+*** [[Timeline of cosmic microwave background astronomy|Microwave astronomy]]
+*** [[Optical astronomy]]
+*** [[Radio astronomy]]
+*** [[UV astronomy]]
+*** [[X-ray astronomy]]
+* [[Astrophysics]]
+** [[Gravity|Gravitational astronomy]]
+*** [[Black hole]]s
+* [[Interstellar medium]]
+* [[Direct numerical simulation|Numerical simulations]]
+** [[Astrophysical plasma]]
+** [[Galaxy formation and evolution]]
+** [[High-energy astronomy|High-energy astrophysics]]
+** [[Hydrodynamics]]
+** [[Magnetohydrodynamics]]
+** [[Star formation]]
+* [[Physical cosmology]]
+* [[Star|Stellar astrophysics]]
+** [[Helioseismology]]
+** [[Stellar evolution]]
+** [[Stellar nucleosynthesis]]
+* [[Planetary science]]
+
+=== Physics ===
+{{Main article|Physics|Outline of physics}}
+
+{{div col}}
+* [[Acoustics]]
+* [[Applied physics]]
+* [[Astrophysics]]
+* [[Atomic, molecular, and optical physics]]
+* [[Biophysics]] ([[Outline of biophysics|outline]])
+* [[Computational physics]]
+* [[Condensed matter physics]]
+* [[Cryogenics]]
+* [[Electromagnetism]]
+* [[Elementary particle physics]]
+* [[Experimental physics]]
+* [[Fluid dynamics]]
+* [[Geophysics]] ([[Outline of geophysics|outline]])
+* [[Mathematical physics]]
+* [[Mechanics]]
+* [[Medical physics]]
+* [[Molecular physics]]
+* [[Newton's laws of motion|Newtonian dynamics]]
+* [[Nuclear physics]]
+* [[Optics]]
+* [[Plasma physics]]
+* [[Quantum physics]]
+* [[Solid mechanics]]
+* [[Solid state physics]]
+* [[Statistical mechanics]]
+* [[Theoretical physics]]
+* [[Thermodynamics]]
+* [[Vehicle dynamics]]
+{{div col end}}
+
+== Formal sciences ==
+{{Main article|Formal science|Outline of formal science}}
+
+=== Computer Science ===
+{{Main|Computer science|Outline of computer science}}
+{{See also|ACM Computing Classification System}}
+''Also a branch of [[electrical engineering]]''
+
+{{div col}}
+* [[Logic in computer science]]
+** [[Formal methods]] ([[Formal verification]])
+** [[Logic programming]]
+** [[Multi-valued logic]]
+*** [[Fuzzy logic]]
+** [[Formal semantics of programming languages|Programming language semantics]]
+** [[Type theory]]
+* [[Algorithm]]s
+** [[Computational geometry]]
+** [[Distributed algorithms]]
+** [[Parallel algorithms]]
+** [[Randomized algorithms]]
+* [[Artificial intelligence]] ([[Outline of artificial intelligence|outline]])
+** [[Cognitive science]]
+*** [[Automated reasoning]]
+*** [[Computer vision]] ([[Outline of computer vision|outline]])
+*** [[Machine learning]]
+**** [[Artificial neural network]]
+**** [[Support vector machine]]
+*** [[Natural language processing]] ([[Computational linguistics]])
+** [[Expert systems]]
+** [[Robotics]] ([[Outline of robotics|outline]])
+* [[Data structures]]
+* [[Computer architecture]]
+* [[Computer graphics]]
+** [[Image processing]]
+** [[Scientific visualization]]
+* [[Computer networking|Computer communications (networks)]]
+** [[Cloud computing]]
+** [[Information theory]]
+** [[Internet]], [[World Wide Web]]
+** [[Ubiquitous computing]]
+** [[Wireless computing]] ([[Mobile computing]])
+* [[Computer security]] and [[High availability|reliability]]
+** [[Cryptography]]
+** [[Fault-tolerant system|Fault-tolerant computing]]
+* Computing in [[mathematics]], [[natural science]]s, [[engineering]], and [[medicine]]
+** [[Symbolic computation|Algebraic (symbolic) computation]]
+** [[Computational biology|Computational biology (bioinformatics)]]
+** [[Computational chemistry]]
+** [[Computational mathematics]]
+** [[Computational neuroscience]]
+** [[Computational number theory]]
+** [[Computational physics]]
+** [[Computer-aided engineering]]
+*** [[Computational fluid dynamics]]
+*** [[Finite element analysis]]
+** [[Numerical analysis]]
+** [[Scientific computing|Scientific computing (Computational science)]]
+* Computing in [[social science]]s, [[The arts|arts]], [[humanities]], and [[profession]]s
+** [[Community informatics]]
+** [[Computational economics]]
+** [[Computational finance]]
+** [[Computational sociology]]
+** [[Digital humanities]] (Humanities computing)
+** [[History of computer hardware]]
+** [[History of computer science]] ([[Outline of computer science#History of computer science|outline]])
+** [[Humanistic informatics]]
+** [[Database]] ([[Outline of databases|outline]])
+*** [[Distributed database]]
+*** [[Object database]]
+*** [[Relational database]]
+** [[Data management]]
+** [[Data mining]]
+** [[Information management]]
+** [[Information retrieval]]
+** [[Knowledge management]]
+** [[Multimedia]], [[hypermedia]]
+*** [[Sound and music computing]]
+* [[Distributed computing]]
+** [[Grid computing]]
+* [[Human-computer interaction]]
+* [[Information science]] ([[Outline of information science|outline]])
+* [[Operating systems]]
+* [[Parallel computing]]
+** [[High-performance computing]]
+* [[Programming languages]]
+** [[Compilers]]
+** [[Programming paradigms]]
+*** [[Concurrent programming language|Concurrent programming]]
+*** [[Functional programming]]
+*** [[Imperative programming]]
+*** [[Logic programming]]
+*** [[Object-oriented programming]]
+** [[Program semantics]]
+** [[Type theory]]
+* [[Quantum computing]]
+* [[Software engineering]]
+** [[Formal methods]] ([[Formal verification]])
+* [[Theory of computation]]
+** [[Automata theory]] ([[Formal languages]])
+** [[Computability theory (computer science)|Computability theory]]
+** [[Computational complexity theory]]
+** [[Concurrency (computer science)#Theory|Concurrency theory]]
+* [[Very-large-scale integration|VLSI design]]
+{{div col end}}
+
+=== Mathematics ===
+{{Main|Mathematics|Outline of mathematics}}
+:''See also: [[Areas of mathematics|Branches of mathematics]] and [[Mathematics Subject Classification]]''
+
+'''[[Pure mathematics]]'''
+
+{{div col}}
+* [[Mathematical logic]] and [[Foundations of mathematics]]
+** [[Intuitionistic logic]]
+** [[Modal logic]]
+** [[Model theory]]
+** [[Proof theory]]
+** [[Recursion theory]]
+** [[Set theory]]
+* [[Algebra]] ([[Outline of algebra|outline]])
+** [[Associative algebra]]
+** [[Category theory]]
+*** [[Topos|Topos theory]]
+** [[Differential algebra]]
+** [[Field theory (mathematics)|Field theory]]
+** [[Group theory]]
+*** [[Group representation]]
+** [[Homological algebra]]
+** [[K-theory]]
+** [[Lattice theory]] ([[Order theory]])
+** [[Lie algebra]]
+** [[Linear algebra]] ([[Vector space]])
+** [[Multilinear algebra]]
+** [[Non-associative algebra]]
+** [[Representation theory]]
+** [[Ring theory]]
+*** [[Commutative algebra]]
+*** [[Noncommutative algebra]]
+** [[Universal algebra]]
+* [[Mathematical analysis|Analysis]]
+** [[Complex analysis]]
+** [[Functional analysis]]
+*** [[Operator theory]]
+** [[Harmonic analysis]]
+*** [[Fourier analysis]]
+** [[Non-standard analysis]]
+** [[Ordinary differential equations]]
+** [[p-adic analysis]]
+** [[Partial differential equations]]
+** [[Real analysis]]
+*** [[Calculus]] ([[Outline of calculus|outline]])
+* [[Probability theory]]
+** [[Ergodic theory]]
+** [[Measure theory]]
+*** [[Integral geometry]]
+** [[Stochastic process]]
+* [[Geometry]] ([[Outline of geometry|outline]]) and [[Topology]]
+** [[Affine geometry]]
+** [[Algebraic geometry]]
+** [[Algebraic topology]]
+** [[Convex geometry]]
+** [[Differential topology]]
+** [[Discrete geometry]]
+** [[Finite geometry]]
+** [[Galois geometry]]
+** [[General topology]]
+** [[Geometric topology]]
+** [[Integral geometry]]
+** [[Noncommutative geometry]]
+** [[Non-Euclidean geometry]]
+** [[Projective geometry]]
+* [[Number theory]]
+** [[Algebraic number theory]]
+** [[Analytic number theory]]
+** [[Arithmetic combinatorics]]
+** [[Geometric number theory]]
+ {{div col end}}
+
+'''[[Applied mathematics]]'''
+
+{{div col}}
+* [[Approximation theory]]
+* [[Combinatorics]] ([[Outline of combinatorics|outline]])
+** [[Coding theory]]
+* [[Cryptography]]
+* [[Dynamical systems]]
+** [[Chaos theory]]
+** [[Fractal geometry]]
+* [[Game theory]]
+* [[Graph theory]]
+* [[Information theory]]
+* [[Mathematical physics]]
+** [[Quantum field theory]]
+** [[Quantum gravity]]
+*** [[String theory]]
+** [[Quantum mechanics]]
+** [[Statistical mechanics]]
+* [[Numerical analysis]]
+* [[Operations research]]
+** [[Assignment problem]]
+** [[Decision analysis]]
+** [[Dynamic programming]]
+** [[Inventory theory]]
+** [[Linear programming]]
+** [[Mathematical optimization]]
+** [[Optimal maintenance]]
+** [[Real options analysis]]
+** [[Job shop scheduling|Scheduling]]
+** [[Stochastic processes]]
+** [[Systems analysis]]
+* [[Statistics]] ([[Outline of statistics|outline]])
+** [[Actuarial science]]
+** [[Demography]]
+** [[Econometrics]]
+** [[Mathematical statistics]]
+** [[Data visualization]]
+* [[Theory of computation]]
+** [[Computational complexity theory]]
+{{div col end}}
+
+=== Statistics ===
+{{Main|Statistics|Outline of statistics}}
+* [[Astrostatistics]]
+* [[Biostatistics]]
+
+== Applied sciences ==
+{{Main article|Applied science|Outline of applied science}}
+
+=== Engineering ===
+{{Main article|Engineering|Outline of engineering}}
+{{See also|List of engineering branches}}
+
+{{div col}}
+'''[[Chemical engineering|Chemical Engineering]]'''
+* [[Bioengineering]]
+** [[Biochemical engineering]]
+** [[Biomolecular engineering]]
+* [[Catalysis]]
+* [[Materials engineering]]
+* [[Molecular engineering]]
+* [[Nanotechnology]]
+* [[Polymer engineering]]
+* [[Process design]]
+** [[Petroleum engineering]]
+** [[Nuclear engineering]]
+** [[Food engineering]]
+* [[Process engineering]]
+* [[Reaction engineering]]
+* [[Thermodynamics]]
+* [[Transport phenomena]]
+
+'''[[Civil engineering|Civil Engineering]]'''
+* [[Coastal engineering]]
+* [[Earthquake engineering]]
+* [[Ecological engineering]]
+* [[Environmental engineering]]
+* [[Geotechnical engineering]]
+** [[Engineering geology]]
+* [[Hydraulic engineering]] 
+* [[Mining engineering]]
+* [[Transportation engineering]]
+** [[Highway engineering]]
+* [[Structural engineering]]
+** [[Architectural engineering]]
+* [[Structural mechanics]]
+* [[Surveying]]
+
+'''[[Educational technology|Educational Technology]]'''
+* [[Instructional design]]
+** [[Distance education]]
+** [[Instructional simulation]]
+* [[Human performance technology]]
+* [[Knowledge management]]
+
+'''[[Electrical engineering|Electrical Engineering]]'''
+* [[Applied physics]]
+* [[Computer engineering]] ([[Outline of computer engineering|outline]])
+* [[Computer science]]
+* [[Control engineering|Control systems engineering]]
+** [[Control theory]]
+* [[Electronic engineering]]
+** [[Instrumentation engineering]]
+* [[Engineering physics]]
+** [[Photonics]]
+* [[Information theory]]
+* [[Mechatronics]]
+* [[Power engineering]]
+* [[Quantum computing]]
+* [[Robotics]] ([[Outline of robotics|outline]])
+* [[Semiconductors]]
+* [[Telecommunications engineering]]
+
+'''[[Materials science|Materials Science and Engineering]]'''
+* [[Biomaterials]]
+* [[Ceramic engineering]]
+* [[Crystallography]]
+* [[Nanomaterials]]
+* [[Photonics]]
+* [[Metallurgy|Physical Metallurgy]]
+* [[Polymer engineering]]
+* [[Polymer science]]
+* [[Semiconductors]]
+
+'''[[Mechanical engineering|Mechanical Engineering]]'''
+* [[Aerospace engineering]]
+**[[Aeronautics]] 
+**[[Astronautics]] 
+* [[Acoustical engineering]]
+* [[Automotive engineering]]
+* [[Biomedical engineering]]
+** [[Biomechanical engineering]]
+** [[Neural engineering]]
+* [[Continuum mechanics]]
+* [[Fluid mechanics]]
+* [[Heat transfer]]
+* [[Industrial engineering]]
+* [[Manufacturing engineering]]
+* [[Marine propulsion|Marine engineering]]
+* [[Mass transfer]]
+* [[Mechatronics]]
+* [[Nanoengineering]]
+* [[Offshore construction|Ocean engineering]]
+* [[Optical engineering]]
+* [[Robotics]]
+* [[Thermodynamics]]
+* [[Vehicle engineering]]
+
+'''[[Systems science]]'''
+* [[Chaos theory]]
+* [[Complex system]]
+* [[Complex systems]]
+* [[Conceptual systems]]
+* [[Control theory]]
+** [[Affect control theory]]
+** [[Control engineering]]
+** [[Control systems]]
+** [[Dynamical systems]]
+** [[Perceptual control theory]]
+* [[Cybernetics]]
+** [[Biocybernetics]]
+** [[Engineering cybernetics]]
+** [[Management cybernetics]]
+** [[Medical cybernetics]]
+** [[New Cybernetics]]
+** [[Second-order cybernetics]]
+** [[Sociocybernetics]]
+* [[Network science]]
+* [[Operations research]]
+* [[Systems biology]]
+** [[Computational systems biology]]
+** [[Synthetic biology]]
+** [[Systems immunology]]
+** [[Systems neuroscience]]
+* [[System dynamics]]
+** [[Social dynamics]]
+* [[Systems ecology]]
+** [[Ecosystem ecology]]
+* [[Systems engineering]]
+** [[Biological systems engineering]]
+** [[Earth systems engineering and management]]
+** [[Enterprise systems engineering]]
+** [[Systems analysis]]
+* [[Systems psychology]]
+** [[Ergonomics]]
+** [[Family systems theory]]
+** [[Systemic therapy]]
+* [[Systems theory]]
+** [[Biochemical systems theory]]
+** [[Ecological systems theory]]
+** [[Developmental systems theory]]
+** [[General systems theory]]
+** [[Living systems theory]]
+** [[LTI system theory]]
+** [[Mathematical system theory]]
+** [[Sociotechnical systems theory]]
+** [[World-systems theory]]
+* [[Systems theory in anthropology]]
+
+
+
+
+{{div col end}}
+
+=== Medicine and health sciences ===
+{{Main article|Medicine|Healthcare science|Outline of health sciences}}
+{{See also|Outline of medicine|Branches of medicine}}
+
+{{div col}}
+* [[Alternative medicine]]
+* [[Cardiology]]
+** [[Cardiac electrophysiology]]
+* [[Clinical laboratory sciences]]/[[Clinical pathology]]/[[Laboratory medicine]]
+** [[Clinical biochemistry]]
+** [[Cytogenetics]]
+** [[Cytohematology]]
+** [[cell biology|Cytology]] ([[Outline of cell biology|outline]])
+** [[Haemostasiology]]
+** [[Histology]]
+** [[Clinical immunology]]
+** [[Clinical microbiology]]
+** [[Molecular genetics]]
+** [[Parasitology]]
+* [[Clinical physiology]]
+* [[Dentistry]] ([[Outline of dentistry and oral health|outline]])
+** [[Dental hygienist|Dental hygiene]] and [[epidemiology]]
+** [[Dental surgery]]
+** [[Endodontics]]
+** [[Dental implant|Implantology]]
+** [[Oral and maxillofacial surgery]]
+** [[Orthodontics]]
+** [[Periodontics]]
+** [[Prosthodontics]]
+* [[Dermatology]]
+* [[Emergency medicine]] ([[Outline of emergency medicine|outline]])
+* [[Endocrinology]]
+* [[Gastroenterology]]
+** [[Hepatology]]
+* [[Geriatrics]]
+* [[Gynaecology]]
+* [[Health informatics]]/[[Clinical informatics]]
+* [[Hematology]]
+* [[Infectious disease]]
+* [[Intensive care medicine]]
+* [[Internal medicine]]
+* [[Medical toxicology]]
+* [[Music therapy]]
+* [[Nephrology]]
+* [[Neurology]]
+* [[Nursing]]
+* [[Nutrition]] ([[Outline of nutrition|outline]]) and [[dietetics]]
+* [[Obstetrics]] ([[Outline of obstetrics|outline]])
+* [[Occupational hygiene]]
+* [[Occupational therapy]]
+* [[Occupational toxicology]]
+* [[Oncology]]
+* [[Ophthalmology]]
+** [[Neuro-ophthalmology]]
+* [[Optometry]]
+* [[Orthoptics]]
+* [[Otolaryngology]]
+* [[Pathology]]
+* [[Pediatrics]]
+* [[Pharmaceutical sciences]]
+** [[Pharmacy]]
+* [[Physical fitness]]
+** Group Fitness / [[aerobics]]
+** [[Kinesiology]] / Exercise science / Human performance
+** [[Personal fitness training]]
+* [[Physical therapy]]
+* [[Physiotherapy]]
+* [[Podiatry]]
+* [[Preventive healthcare|Preventive medicine]]
+* [[Primary care]]
+** [[General medical services|General practice]]
+* [[Psychiatry]] ([[Outline of psychiatry|outline]])
+** [[Forensic psychiatry]]
+* [[Psychology]] ([[Outline of psychology|outline]])
+* [[Public health]]
+** [[Epidemiology]]
+* [[Pulmonology]]
+* [[Radiology]]
+* [[Recreational therapy]]
+* [[Physical medicine and rehabilitation|Rehabilitation medicine]]
+* [[Respiratory therapy]]
+* [[Rheumatology]]
+* [[Sleep medicine]]
+* [[Speech-language pathology]]
+* [[Sports medicine]]
+* [[Surgery]]
+** [[Bariatric surgery]]
+** [[Cardiothoracic surgery]]
+** [[Neurosurgery]]
+** [[Orthopedic surgery]]
+** [[Plastic surgery]]
+** [[Trauma surgery]]
+** [[Traumatology]]
+* [[Urology]]
+** [[Andrology]]
+* [[Veterinary medicine]]
+{{div col end}}
+

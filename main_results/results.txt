@@ -1,0 +1,1375 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+  log type:  text
+ opened on:  27 Mar 2023, 14:16:39
+
+. 
+. // import data
+. 
+. import delimited using "01_entry.csv", clear 
+(11 vars, 3,251,828 obs)
+
+. 
+. // preparing the data for analysis
+. 
+. replace case="1" if case=="TRUE"
+(112,132 real changes made)
+
+. replace case="0" if case=="FALSE"
+(3,139,696 real changes made)
+
+. destring case, replace
+case: all characters numeric; replaced as byte
+
+. 
+. rename case selected
+
+. 
+. rename choice_op switch_no
+
+. 
+. encode is_fem_factor, gen(is_fem)
+
+. replace is_fem = 2 - is_fem
+(2,164,995 real changes made)
+
+. label define is_fem_label 0 "male" 1 "female"
+
+. label values is_fem is_fem_label
+
+. 
+. egen long oid_num = group(oid)
+
+. 
+. summarize stem
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+        stem |  3,251,828    .3936241    .4885532          0          1
+
+. generate stem_c = stem - r(mean)
+
+. summarize stem_c
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      stem_c |  3,251,828    1.31e-08    .4885532  -.3936241   .6063759
+
+. 
+. cmset oid_num switch_no to_matched_field
+panel data: panels oid_num and time switch_no
+note: case identifier _caseid generated from oid_num switch_no
+note: panel by alternatives identifier _panelaltid generated from oid_num to_matched_field
+note: alternatives are unbalanced across choice sets; at least one choice set does not have all possible values of to_matched_field
+
+                     caseid variable:  _caseid
+               alternatives variable:  to_matched_field
+      panel by alternatives variable:  _panelaltid (unbalanced)
+                       time variable:  switch_no, 1 to 8, but with gaps
+                               delta:  1 unit
+
+note: data have been xtset
+
+. 
+. // main model
+. 
+. clogit selected ib0.is_fem##(c.fab c.stem_c), group(_caseid)  vce(cluster oid_num) 
+note: 1.is_fem omitted because of no within-group variance.
+
+Iteration 0:   log pseudolikelihood = -365032.32  
+Iteration 1:   log pseudolikelihood =  -365016.5  
+Iteration 2:   log pseudolikelihood =  -365016.5  
+
+Conditional (fixed-effects) logistic regression
+
+                                                Number of obs     =  3,251,828
+                                                Wald chi2(4)      =   18165.97
+                                                Prob > chi2       =     0.0000
+Log pseudolikelihood =  -365016.5               Pseudo R2         =     0.0333
+
+                              (Std. Err. adjusted for 86,879 clusters in oid_num)
+---------------------------------------------------------------------------------
+                |               Robust
+       selected |      Coef.   Std. Err.      z    P>|z|     [95% Conf. Interval]
+----------------+----------------------------------------------------------------
+         is_fem |
+        female  |          0  (omitted)
+            fab |   .1053203   .0102725    10.25   0.000     .0851866    .1254541
+         stem_c |   1.007588   .0086987   115.83   0.000     .9905386    1.024637
+                |
+   is_fem#c.fab |
+        female  |  -.9929907   .0191453   -51.87   0.000    -1.030515   -.9554666
+                |
+is_fem#c.stem_c |
+        female  |  -.8277406   .0146032   -56.68   0.000    -.8563623   -.7991189
+---------------------------------------------------------------------------------
+
+. 
+. clogit selected fab stem_c if is_fem==0, group(_caseid)  vce(cluster oid_num) // simple slope of FAB for men
+
+Iteration 0:   log pseudolikelihood = -241890.42  
+Iteration 1:   log pseudolikelihood = -241879.07  
+Iteration 2:   log pseudolikelihood = -241879.07  
+
+Conditional (fixed-effects) logistic regression
+
+                                                Number of obs     =  2,164,995
+                                                Wald chi2(2)      =   14893.53
+                                                Prob > chi2       =     0.0000
+Log pseudolikelihood = -241879.07               Pseudo R2         =     0.0378
+
+                           (Std. Err. adjusted for 57,519 clusters in oid_num)
+------------------------------------------------------------------------------
+             |               Robust
+    selected |      Coef.   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         fab |   .1053203   .0102725    10.25   0.000     .0851866    .1254541
+      stem_c |   1.007588   .0086987   115.83   0.000     .9905385    1.024637
+------------------------------------------------------------------------------
+
+. margins, dydx(fab) atmeans
+
+Conditional marginal effects                    Number of obs     =  2,164,995
+Model VCE    : Robust
+
+Expression   : Pr(selected|fixed effect is 0), predict(pu0)
+dy/dx w.r.t. : fab
+at           : fab             =   -.0023192 (mean)
+               stem_c          =   -.0028828 (mean)
+
+------------------------------------------------------------------------------
+             |            Delta-method
+             |      dy/dx   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         fab |     .02633   .0025681    10.25   0.000     .0212966    .0313634
+------------------------------------------------------------------------------
+
+. margins, dydx(stem_c) atmeans
+
+Conditional marginal effects                    Number of obs     =  2,164,995
+Model VCE    : Robust
+
+Expression   : Pr(selected|fixed effect is 0), predict(pu0)
+dy/dx w.r.t. : stem_c
+at           : fab             =   -.0023192 (mean)
+               stem_c          =   -.0028828 (mean)
+
+------------------------------------------------------------------------------
+             |            Delta-method
+             |      dy/dx   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+      stem_c |   .2518963   .0021747   115.83   0.000      .247634    .2561585
+------------------------------------------------------------------------------
+
+. 
+. margins, at(fab==(-0.5(0.1)0.5)) atmeans  // for plotting Figure 2
+
+Adjusted predictions                            Number of obs     =  2,164,995
+Model VCE    : Robust
+
+Expression   : Pr(selected|fixed effect is 0), predict(pu0)
+
+1._at        : fab             =         -.5
+               stem_c          =   -.0028828 (mean)
+
+2._at        : fab             =         -.4
+               stem_c          =   -.0028828 (mean)
+
+3._at        : fab             =         -.3
+               stem_c          =   -.0028828 (mean)
+
+4._at        : fab             =         -.2
+               stem_c          =   -.0028828 (mean)
+
+5._at        : fab             =         -.1
+               stem_c          =   -.0028828 (mean)
+
+6._at        : fab             =           0
+               stem_c          =   -.0028828 (mean)
+
+7._at        : fab             =          .1
+               stem_c          =   -.0028828 (mean)
+
+8._at        : fab             =          .2
+               stem_c          =   -.0028828 (mean)
+
+9._at        : fab             =          .3
+               stem_c          =   -.0028828 (mean)
+
+10._at       : fab             =          .4
+               stem_c          =   -.0028828 (mean)
+
+11._at       : fab             =          .5
+               stem_c          =   -.0028828 (mean)
+
+------------------------------------------------------------------------------
+             |            Delta-method
+             |     Margin   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         _at |
+          1  |   .4861124   .0012856   378.13   0.000     .4835927     .488632
+          2  |   .4887437   .0010292   474.87   0.000     .4867265    .4907609
+          3  |   .4913757   .0007727   635.92   0.000     .4898612    .4928901
+          4  |   .4940081   .0005161   957.29   0.000     .4929967    .4950195
+          5  |   .4966409   .0002593  1915.08   0.000     .4961326    .4971492
+          6  |   .4992738   6.27e-06  8.0e+04   0.000     .4992615    .4992861
+          7  |   .5019068   .0002544  1972.84   0.000     .5014082    .5024055
+          8  |   .5045397   .0005111   987.07   0.000     .5035379    .5055416
+          9  |   .5071724   .0007678   660.52   0.000     .5056674    .5086773
+         10  |   .5098046   .0010244   497.66   0.000     .5077968    .5118124
+         11  |   .5124363   .0012808   400.09   0.000     .5099259    .5149467
+------------------------------------------------------------------------------
+
+. 
+. clogit selected fab stem_c if is_fem==1, group(_caseid)  vce(cluster oid_num) // simple slope of FAB for women
+
+Iteration 0:   log pseudolikelihood = -123141.24  
+Iteration 1:   log pseudolikelihood = -123137.43  
+Iteration 2:   log pseudolikelihood = -123137.43  
+
+Conditional (fixed-effects) logistic regression
+
+                                                Number of obs     =  1,086,833
+                                                Wald chi2(2)      =    3272.29
+                                                Prob > chi2       =     0.0000
+Log pseudolikelihood = -123137.43               Pseudo R2         =     0.0242
+
+                           (Std. Err. adjusted for 29,360 clusters in oid_num)
+------------------------------------------------------------------------------
+             |               Robust
+    selected |      Coef.   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         fab |  -.8876703   .0161562   -54.94   0.000    -.9193359   -.8560047
+      stem_c |   .1798471   .0117299    15.33   0.000      .156857    .2028371
+------------------------------------------------------------------------------
+
+. margins, dydx(fab) atmeans
+
+Conditional marginal effects                    Number of obs     =  1,086,833
+Model VCE    : Robust
+
+Expression   : Pr(selected|fixed effect is 0), predict(pu0)
+dy/dx w.r.t. : fab
+at           : fab             =    .0046199 (mean)
+               stem_c          =    .0057427 (mean)
+
+------------------------------------------------------------------------------
+             |            Delta-method
+             |      dy/dx   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         fab |   -.221917    .004039   -54.94   0.000    -.2298334   -.2140007
+------------------------------------------------------------------------------
+
+. margins, dydx(stem_c) atmeans
+
+Conditional marginal effects                    Number of obs     =  1,086,833
+Model VCE    : Robust
+
+Expression   : Pr(selected|fixed effect is 0), predict(pu0)
+dy/dx w.r.t. : stem_c
+at           : fab             =    .0046199 (mean)
+               stem_c          =    .0057427 (mean)
+
+------------------------------------------------------------------------------
+             |            Delta-method
+             |      dy/dx   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+      stem_c |   .0449617   .0029325    15.33   0.000     .0392141    .0507092
+------------------------------------------------------------------------------
+
+. 
+. margins, at(fab==(-0.5(0.1)0.5)) atmeans  // for plotting Figure 2
+
+Adjusted predictions                            Number of obs     =  1,086,833
+Model VCE    : Robust
+
+Expression   : Pr(selected|fixed effect is 0), predict(pu0)
+
+1._at        : fab             =         -.5
+               stem_c          =    .0057427 (mean)
+
+2._at        : fab             =         -.4
+               stem_c          =    .0057427 (mean)
+
+3._at        : fab             =         -.3
+               stem_c          =    .0057427 (mean)
+
+4._at        : fab             =         -.2
+               stem_c          =    .0057427 (mean)
+
+5._at        : fab             =         -.1
+               stem_c          =    .0057427 (mean)
+
+6._at        : fab             =           0
+               stem_c          =    .0057427 (mean)
+
+7._at        : fab             =          .1
+               stem_c          =    .0057427 (mean)
+
+8._at        : fab             =          .2
+               stem_c          =    .0057427 (mean)
+
+9._at        : fab             =          .3
+               stem_c          =    .0057427 (mean)
+
+10._at       : fab             =          .4
+               stem_c          =    .0057427 (mean)
+
+11._at       : fab             =          .5
+               stem_c          =    .0057427 (mean)
+
+------------------------------------------------------------------------------
+             |            Delta-method
+             |     Margin   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         _at |
+          1  |   .6094184   .0019227   316.96   0.000     .6056499    .6131868
+          2  |   .5880963   .0015654   375.69   0.000     .5850282    .5911643
+          3  |   .5664383   .0011903   475.89   0.000     .5641054    .5687711
+          4  |   .5445235   .0008014   679.47   0.000     .5429528    .5460942
+          5  |   .5224349   .0004033  1295.52   0.000     .5216445    .5232253
+          6  |   .5002582   .0000168  3.0e+04   0.000     .5002252    .5002912
+          7  |   .4780805   .0004037  1184.36   0.000     .4772893    .4788717
+          8  |   .4559889   .0008019   568.63   0.000     .4544172    .4575606
+          9  |   .4340691   .0011909   364.48   0.000     .4317349    .4364033
+         10  |   .4124042   .0015663   263.30   0.000     .4093343    .4154741
+         11  |   .3910734   .0019239   203.27   0.000     .3873026    .3948442
+------------------------------------------------------------------------------
+
+. 
+. 
+. clogit selected ib0.is_fem##(c.fab c.sexism c.stem_c), group(_caseid)  vce(cluster oid_num) // adding sexism
+note: 1.is_fem omitted because of no within-group variance.
+
+Iteration 0:   log pseudolikelihood = -359318.44  
+Iteration 1:   log pseudolikelihood = -359282.26  
+Iteration 2:   log pseudolikelihood = -359282.25  
+
+Conditional (fixed-effects) logistic regression
+
+                                                Number of obs     =  3,251,828
+                                                Wald chi2(6)      =   21264.22
+                                                Prob > chi2       =     0.0000
+Log pseudolikelihood = -359282.25               Pseudo R2         =     0.0485
+
+                              (Std. Err. adjusted for 86,879 clusters in oid_num)
+---------------------------------------------------------------------------------
+                |               Robust
+       selected |      Coef.   Std. Err.      z    P>|z|     [95% Conf. Interval]
+----------------+----------------------------------------------------------------
+         is_fem |
+        female  |          0  (omitted)
+            fab |  -.3246279   .0086669   -37.46   0.000    -.3416147   -.3076411
+         sexism |   .9625809   .0093494   102.96   0.000     .9442563    .9809055
+         stem_c |   .9287455   .0087272   106.42   0.000     .9116404    .9458505
+                |
+   is_fem#c.fab |
+        female  |  -.6515086   .0176479   -36.92   0.000    -.6860978   -.6169195
+                |
+is_fem#c.sexism |
+        female  |  -.7086777   .0149756   -47.32   0.000    -.7380294    -.679326
+                |
+is_fem#c.stem_c |
+        female  |   -.783727   .0143692   -54.54   0.000    -.8118901   -.7555638
+---------------------------------------------------------------------------------
+
+. 
+. clogit selected fab sexism stem_c if is_fem==0, group(_caseid)  vce(cluster oid_num) // simple slope for men
+
+Iteration 0:   log pseudolikelihood = -236385.79  
+Iteration 1:   log pseudolikelihood = -236368.41  
+Iteration 2:   log pseudolikelihood = -236368.41  
+
+Conditional (fixed-effects) logistic regression
+
+                                                Number of obs     =  2,164,995
+                                                Wald chi2(3)      =   16461.52
+                                                Prob > chi2       =     0.0000
+Log pseudolikelihood = -236368.41               Pseudo R2         =     0.0597
+
+                           (Std. Err. adjusted for 57,519 clusters in oid_num)
+------------------------------------------------------------------------------
+             |               Robust
+    selected |      Coef.   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         fab |  -.3246279   .0086669   -37.46   0.000    -.3416148    -.307641
+      sexism |   .9625809   .0093495   102.96   0.000     .9442562    .9809055
+      stem_c |   .9287454   .0087272   106.42   0.000     .9116404    .9458505
+------------------------------------------------------------------------------
+
+. margins, dydx(fab) atmeans
+
+Conditional marginal effects                    Number of obs     =  2,164,995
+Model VCE    : Robust
+
+Expression   : Pr(selected|fixed effect is 0), predict(pu0)
+dy/dx w.r.t. : fab
+at           : fab             =   -.0023192 (mean)
+               sexism          =   -.0025559 (mean)
+               stem_c          =   -.0028828 (mean)
+
+------------------------------------------------------------------------------
+             |            Delta-method
+             |      dy/dx   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         fab |  -.0811566   .0021667   -37.46   0.000    -.0854033   -.0769099
+------------------------------------------------------------------------------
+
+. margins, dydx(stem_c) atmeans
+
+Conditional marginal effects                    Number of obs     =  2,164,995
+Model VCE    : Robust
+
+Expression   : Pr(selected|fixed effect is 0), predict(pu0)
+dy/dx w.r.t. : stem_c
+at           : fab             =   -.0023192 (mean)
+               sexism          =   -.0025559 (mean)
+               stem_c          =   -.0028828 (mean)
+
+------------------------------------------------------------------------------
+             |            Delta-method
+             |      dy/dx   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+      stem_c |   .2321852   .0021818   106.42   0.000      .227909    .2364614
+------------------------------------------------------------------------------
+
+. 
+. clogit selected fab sexism stem_c if is_fem==1, group(_caseid)  vce(cluster oid_num) // simple slope for women
+
+Iteration 0:   log pseudolikelihood = -122917.56  
+Iteration 1:   log pseudolikelihood = -122913.84  
+Iteration 2:   log pseudolikelihood = -122913.84  
+
+Conditional (fixed-effects) logistic regression
+
+                                                Number of obs     =  1,086,833
+                                                Wald chi2(3)      =    4802.50
+                                                Prob > chi2       =     0.0000
+Log pseudolikelihood = -122913.84               Pseudo R2         =     0.0260
+
+                           (Std. Err. adjusted for 29,360 clusters in oid_num)
+------------------------------------------------------------------------------
+             |               Robust
+    selected |      Coef.   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         fab |  -.9761372   .0153733   -63.50   0.000    -1.006268   -.9460061
+      sexism |   .2539035   .0116987    21.70   0.000     .2309744    .2768326
+      stem_c |   .1450187   .0114155    12.70   0.000     .1226448    .1673927
+------------------------------------------------------------------------------
+
+. margins, dydx(fab) atmeans
+
+Conditional marginal effects                    Number of obs     =  1,086,833
+Model VCE    : Robust
+
+Expression   : Pr(selected|fixed effect is 0), predict(pu0)
+dy/dx w.r.t. : fab
+at           : fab             =    .0046199 (mean)
+               sexism          =    .0050915 (mean)
+               stem_c          =    .0057427 (mean)
+
+------------------------------------------------------------------------------
+             |            Delta-method
+             |      dy/dx   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         fab |  -.2440339   .0038433   -63.50   0.000    -.2515666   -.2365012
+------------------------------------------------------------------------------
+
+. margins, dydx(stem_c) atmeans
+
+Conditional marginal effects                    Number of obs     =  1,086,833
+Model VCE    : Robust
+
+Expression   : Pr(selected|fixed effect is 0), predict(pu0)
+dy/dx w.r.t. : stem_c
+at           : fab             =    .0046199 (mean)
+               sexism          =    .0050915 (mean)
+               stem_c          =    .0057427 (mean)
+
+------------------------------------------------------------------------------
+             |            Delta-method
+             |      dy/dx   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+      stem_c |   .0362546   .0028539    12.70   0.000     .0306611    .0418481
+------------------------------------------------------------------------------
+
+. 
+. 
+. // calculating the % reduction in gender x FAB coefficient due to sexism
+. 
+. /* 
+> 
+> // FAB slope difference pre-adjustment for sexism
+> . display .02633 - (-.221917)
+> .248247
+> 
+> // FAB slope difference post-adjustment for sexism
+> . display -.0811566 - (-.2440339)
+> .1628773
+> 
+> // FAB reduction in gender difference in slopes
+> . display (.248247 - .1628773) / .248247
+> .34389016
+> 
+> */
+. 
+. 
+. // calculating the % reduction in gender x STEM coefficient due to sexism
+. 
+. /* 
+> // STEM slope difference pre-adjustment for sexism
+> . display .2518963 - .0449617
+> .2069346
+> 
+> // STEM slope difference post-adjustment for sexism
+> . display .2321852 - .0362546
+> .1959306
+> 
+> // STEM reduction in gender difference in slopes
+> . display (.2069346 - .1959306) / .2069346
+> .05317622
+> 
+> */
+. 
+. 
+. /////////////////////////////
+> // Analyses on FIELD EXITS //
+. /////////////////////////////
+> 
+. // import data
+. 
+. import delimited using "02_exit.csv", clear
+(10 vars, 665,075 obs)
+
+. 
+. // preparing the data for analysis
+. 
+. encode stem, gen(stem_num)
+
+. label drop stem_num
+
+. 
+. replace stem_num = stem_num - 1
+(665,075 real changes made)
+
+. 
+. encode left_field, gen(left_field_num)
+
+. 
+. replace left_field_num = left_field_num - 1
+(665,075 real changes made)
+
+. label drop left_field_num
+
+. 
+. tab left_field left_field_num
+
+           |    left_field_num
+left_field |         0          1 |     Total
+-----------+----------------------+----------
+     FALSE |   552,943          0 |   552,943 
+      TRUE |         0    112,132 |   112,132 
+-----------+----------------------+----------
+     Total |   552,943    112,132 |   665,075 
+
+. 
+. encode is_fem, gen(is_fem_num)
+
+. 
+. replace is_fem_num = 2 - is_fem_num
+(462,380 real changes made)
+
+. 
+. label define stemnonstem 0 "non-STEM" 1 "STEM"
+
+. 
+. label define MF 0 "man" 1 "woman"
+
+. 
+. label values stem_num stemnonstem
+
+. 
+. label values is_fem_num MF
+
+. 
+. summarize stem_num
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+    stem_num |    665,075    .6491734    .4772291          0          1
+
+. generate stem_c = stem_num - r(mean)
+
+. summarize stem_c
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      stem_c |    665,075    3.20e-09    .4772291  -.6491734   .3508266
+
+. 
+. // main model
+. 
+. logit left_field_num ib0.is_fem_num##(c.fab c.stem_c), vce(cluster oid) 
+
+Iteration 0:   log pseudolikelihood = -301718.07  
+Iteration 1:   log pseudolikelihood = -299919.57  
+Iteration 2:   log pseudolikelihood = -299893.33  
+Iteration 3:   log pseudolikelihood = -299893.32  
+
+Logistic regression                             Number of obs     =    665,075
+                                                Wald chi2(5)      =    2914.03
+                                                Prob > chi2       =     0.0000
+Log pseudolikelihood = -299893.32               Pseudo R2         =     0.0060
+
+                                     (Std. Err. adjusted for 364,355 clusters in oid)
+-------------------------------------------------------------------------------------
+                    |               Robust
+     left_field_num |      Coef.   Std. Err.      z    P>|z|     [95% Conf. Interval]
+--------------------+----------------------------------------------------------------
+         is_fem_num |
+             woman  |    .118782    .008718    13.62   0.000      .101695     .135869
+                fab |   .0497464   .0105995     4.69   0.000     .0289719    .0705209
+             stem_c |  -.4014356   .0108442   -37.02   0.000    -.4226898   -.3801813
+                    |
+   is_fem_num#c.fab |
+             woman  |   .2953565   .0161222    18.32   0.000     .2637575    .3269555
+                    |
+is_fem_num#c.stem_c |
+             woman  |   .0126425   .0184484     0.69   0.493    -.0235157    .0488007
+                    |
+              _cons |  -1.627023   .0048119  -338.13   0.000    -1.636454   -1.617592
+-------------------------------------------------------------------------------------
+
+. 
+. logit left_field_num ib1.is_fem_num##(c.fab c.stem_c), vce(cluster oid)  // switch omitted gender category -> FAB slope for women
+
+Iteration 0:   log pseudolikelihood = -301718.07  
+Iteration 1:   log pseudolikelihood = -299919.57  
+Iteration 2:   log pseudolikelihood = -299893.33  
+Iteration 3:   log pseudolikelihood = -299893.32  
+
+Logistic regression                             Number of obs     =    665,075
+                                                Wald chi2(5)      =    2914.03
+                                                Prob > chi2       =     0.0000
+Log pseudolikelihood = -299893.32               Pseudo R2         =     0.0060
+
+                                     (Std. Err. adjusted for 364,355 clusters in oid)
+-------------------------------------------------------------------------------------
+                    |               Robust
+     left_field_num |      Coef.   Std. Err.      z    P>|z|     [95% Conf. Interval]
+--------------------+----------------------------------------------------------------
+         is_fem_num |
+               man  |   -.118782    .008718   -13.62   0.000     -.135869    -.101695
+                fab |   .3451029   .0121482    28.41   0.000      .321293    .3689129
+             stem_c |   -.388793   .0149247   -26.05   0.000     -.418045   -.3595411
+                    |
+   is_fem_num#c.fab |
+               man  |  -.2953565   .0161222   -18.32   0.000    -.3269555   -.2637575
+                    |
+is_fem_num#c.stem_c |
+               man  |  -.0126425   .0184484    -0.69   0.493    -.0488007    .0235157
+                    |
+              _cons |  -1.508241   .0072698  -207.47   0.000     -1.52249   -1.493992
+-------------------------------------------------------------------------------------
+
+. 
+. margins, dydx(fab) at(is_fem_num==(0 1)) atmeans // average marginal effects
+
+Conditional marginal effects                    Number of obs     =    665,075
+Model VCE    : Robust
+
+Expression   : Pr(left_field_num), predict()
+dy/dx w.r.t. : fab
+
+1._at        : is_fem_num      =           0
+               fab             =   -2.61e-09 (mean)
+               stem_c          =    3.20e-09 (mean)
+
+2._at        : is_fem_num      =           1
+               fab             =   -2.61e-09 (mean)
+               stem_c          =    3.20e-09 (mean)
+
+------------------------------------------------------------------------------
+             |            Delta-method
+             |      dy/dx   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+fab          |
+         _at |
+          1  |   .0068284   .0014528     4.70   0.000     .0039809    .0096759
+          2  |   .0512017   .0018246    28.06   0.000     .0476254    .0547779
+------------------------------------------------------------------------------
+
+. 
+. margins, dydx(fab) at(is_fem_num==(0 1)) pwcompare(effects) atmeans // compare average marginal effects
+
+Pairwise comparisons of conditional marginal effects
+
+Model VCE    : Robust                           Number of obs     =    665,075
+
+Expression   : Pr(left_field_num), predict()
+dy/dx w.r.t. : fab
+
+1._at        : is_fem_num      =           0
+               fab             =   -2.61e-09 (mean)
+               stem_c          =    3.20e-09 (mean)
+
+2._at        : is_fem_num      =           1
+               fab             =   -2.61e-09 (mean)
+               stem_c          =    3.20e-09 (mean)
+
+------------------------------------------------------------------------------
+             |   Contrast Delta-method    Unadjusted           Unadjusted
+             |      dy/dx   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+fab          |
+         _at |
+     2 vs 1  |   .0443732   .0023324    19.02   0.000     .0398019    .0489446
+------------------------------------------------------------------------------
+
+. 
+. margins, at(is_fem_num==(0 1) fab==(-0.5(0.1)0.5)) atmeans // for plotting Figure 3
+
+Adjusted predictions                            Number of obs     =    665,075
+Model VCE    : Robust
+
+Expression   : Pr(left_field_num), predict()
+
+1._at        : is_fem_num      =           0
+               fab             =         -.5
+               stem_c          =    3.20e-09 (mean)
+
+2._at        : is_fem_num      =           0
+               fab             =         -.4
+               stem_c          =    3.20e-09 (mean)
+
+3._at        : is_fem_num      =           0
+               fab             =         -.3
+               stem_c          =    3.20e-09 (mean)
+
+4._at        : is_fem_num      =           0
+               fab             =         -.2
+               stem_c          =    3.20e-09 (mean)
+
+5._at        : is_fem_num      =           0
+               fab             =         -.1
+               stem_c          =    3.20e-09 (mean)
+
+6._at        : is_fem_num      =           0
+               fab             =           0
+               stem_c          =    3.20e-09 (mean)
+
+7._at        : is_fem_num      =           0
+               fab             =          .1
+               stem_c          =    3.20e-09 (mean)
+
+8._at        : is_fem_num      =           0
+               fab             =          .2
+               stem_c          =    3.20e-09 (mean)
+
+9._at        : is_fem_num      =           0
+               fab             =          .3
+               stem_c          =    3.20e-09 (mean)
+
+10._at       : is_fem_num      =           0
+               fab             =          .4
+               stem_c          =    3.20e-09 (mean)
+
+11._at       : is_fem_num      =           0
+               fab             =          .5
+               stem_c          =    3.20e-09 (mean)
+
+12._at       : is_fem_num      =           1
+               fab             =         -.5
+               stem_c          =    3.20e-09 (mean)
+
+13._at       : is_fem_num      =           1
+               fab             =         -.4
+               stem_c          =    3.20e-09 (mean)
+
+14._at       : is_fem_num      =           1
+               fab             =         -.3
+               stem_c          =    3.20e-09 (mean)
+
+15._at       : is_fem_num      =           1
+               fab             =         -.2
+               stem_c          =    3.20e-09 (mean)
+
+16._at       : is_fem_num      =           1
+               fab             =         -.1
+               stem_c          =    3.20e-09 (mean)
+
+17._at       : is_fem_num      =           1
+               fab             =           0
+               stem_c          =    3.20e-09 (mean)
+
+18._at       : is_fem_num      =           1
+               fab             =          .1
+               stem_c          =    3.20e-09 (mean)
+
+19._at       : is_fem_num      =           1
+               fab             =          .2
+               stem_c          =    3.20e-09 (mean)
+
+20._at       : is_fem_num      =           1
+               fab             =          .3
+               stem_c          =    3.20e-09 (mean)
+
+21._at       : is_fem_num      =           1
+               fab             =          .4
+               stem_c          =    3.20e-09 (mean)
+
+22._at       : is_fem_num      =           1
+               fab             =          .5
+               stem_c          =    3.20e-09 (mean)
+
+------------------------------------------------------------------------------
+             |            Delta-method
+             |     Margin   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         _at |
+          1  |   .1608528   .0010147   158.52   0.000      .158864    .1628417
+          2  |   .1615254    .000912   177.10   0.000     .1597379     .163313
+          3  |   .1622003   .0008202   197.76   0.000     .1605927    .1638079
+          4  |   .1628775   .0007438   218.98   0.000     .1614197    .1643353
+          5  |   .1635569   .0006886   237.53   0.000     .1622073    .1649064
+          6  |   .1642386   .0006605   248.66   0.000      .162944    .1655331
+          7  |   .1649226   .0006637   248.50   0.000     .1636218    .1662234
+          8  |   .1656088   .0006983   237.16   0.000     .1642402    .1669775
+          9  |   .1662974   .0007607   218.63   0.000     .1648065    .1677882
+         10  |   .1669882   .0008451   197.59   0.000     .1653319    .1686446
+         11  |   .1676814   .0009462   177.21   0.000     .1658268    .1695359
+         12  |   .1569906    .001236   127.02   0.000     .1545681    .1594131
+         13  |   .1616121   .0011691   138.24   0.000     .1593208    .1639034
+         14  |   .1663428   .0011147   149.22   0.000     .1641579    .1685276
+         15  |   .1711837   .0010781   158.78   0.000     .1690706    .1732968
+         16  |   .1761357   .0010646   165.45   0.000     .1740491    .1782222
+         17  |   .1811996   .0010786   168.00   0.000     .1790856    .1833136
+         18  |   .1863762   .0011229   165.98   0.000     .1841755     .188577
+         19  |   .1916661   .0011977   160.03   0.000     .1893186    .1940136
+         20  |   .1970697   .0013014   151.43   0.000      .194519    .1996205
+         21  |   .2025876   .0014311   141.56   0.000     .1997826    .2053925
+         22  |   .2082198   .0015836   131.48   0.000      .205116    .2113236
+------------------------------------------------------------------------------
+
+. 
+. logit left_field_num ib0.is_fem_num##c.stem_c, vce(cluster oid)  // just STEM
+
+Iteration 0:   log pseudolikelihood = -301718.07  
+Iteration 1:   log pseudolikelihood = -300379.48  
+Iteration 2:   log pseudolikelihood = -300374.02  
+Iteration 3:   log pseudolikelihood = -300374.02  
+
+Logistic regression                             Number of obs     =    665,075
+                                                Wald chi2(3)      =    2036.84
+                                                Prob > chi2       =     0.0000
+Log pseudolikelihood = -300374.02               Pseudo R2         =     0.0045
+
+                                     (Std. Err. adjusted for 364,355 clusters in oid)
+-------------------------------------------------------------------------------------
+                    |               Robust
+     left_field_num |      Coef.   Std. Err.      z    P>|z|     [95% Conf. Interval]
+--------------------+----------------------------------------------------------------
+         is_fem_num |
+             woman  |   .1026792   .0086848    11.82   0.000     .0856572    .1197011
+             stem_c |  -.3790826   .0098986   -38.30   0.000    -.3984836   -.3596816
+                    |
+is_fem_num#c.stem_c |
+             woman  |   .1930855   .0164105    11.77   0.000     .1609216    .2252494
+                    |
+              _cons |  -1.624902   .0047843  -339.63   0.000    -1.634279   -1.615525
+-------------------------------------------------------------------------------------
+
+. 
+. 
+. logit left_field_num ib0.is_fem_num##(c.fab c.sexism c.stem_c), vce(cluster oid)  // adding sexism
+
+Iteration 0:   log pseudolikelihood = -301718.07  
+Iteration 1:   log pseudolikelihood = -298799.78  
+Iteration 2:   log pseudolikelihood =  -298746.6  
+Iteration 3:   log pseudolikelihood = -298746.59  
+
+Logistic regression                             Number of obs     =    665,075
+                                                Wald chi2(7)      =    4969.62
+                                                Prob > chi2       =     0.0000
+Log pseudolikelihood = -298746.59               Pseudo R2         =     0.0098
+
+                                     (Std. Err. adjusted for 364,355 clusters in oid)
+-------------------------------------------------------------------------------------
+                    |               Robust
+     left_field_num |      Coef.   Std. Err.      z    P>|z|     [95% Conf. Interval]
+--------------------+----------------------------------------------------------------
+         is_fem_num |
+             woman  |   .1052172   .0087545    12.02   0.000     .0880588    .1223756
+                fab |   .3791102    .013647    27.78   0.000     .3523627    .4058578
+             sexism |  -.5878595   .0157877   -37.24   0.000    -.6188028   -.5569162
+             stem_c |  -.1780602   .0131256   -13.57   0.000    -.2037859   -.1523345
+                    |
+   is_fem_num#c.fab |
+             woman  |   .1555324    .020706     7.51   0.000     .1149494    .1961155
+                    |
+is_fem_num#c.sexism |
+             woman  |   .2320728   .0243994     9.51   0.000     .1842508    .2798948
+                    |
+is_fem_num#c.stem_c |
+             woman  |  -.0729828   .0214525    -3.40   0.001     -.115029   -.0309367
+                    |
+              _cons |  -1.628692   .0048231  -337.69   0.000    -1.638145   -1.619238
+-------------------------------------------------------------------------------------
+
+. 
+. logit left_field_num ib1.is_fem_num##(c.fab c.sexism c.stem_c), vce(cluster oid)  // switch omitted gender category -> FAB slope for women
+
+Iteration 0:   log pseudolikelihood = -301718.07  
+Iteration 1:   log pseudolikelihood = -298799.78  
+Iteration 2:   log pseudolikelihood =  -298746.6  
+Iteration 3:   log pseudolikelihood = -298746.59  
+
+Logistic regression                             Number of obs     =    665,075
+                                                Wald chi2(7)      =    4969.62
+                                                Prob > chi2       =     0.0000
+Log pseudolikelihood = -298746.59               Pseudo R2         =     0.0098
+
+                                     (Std. Err. adjusted for 364,355 clusters in oid)
+-------------------------------------------------------------------------------------
+                    |               Robust
+     left_field_num |      Coef.   Std. Err.      z    P>|z|     [95% Conf. Interval]
+--------------------+----------------------------------------------------------------
+         is_fem_num |
+               man  |  -.1052172   .0087545   -12.02   0.000    -.1223756   -.0880588
+                fab |   .5346426   .0155724    34.33   0.000     .5041213     .565164
+             sexism |  -.3557867   .0186033   -19.12   0.000    -.3922484    -.319325
+             stem_c |   -.251043   .0169685   -14.79   0.000    -.2843006   -.2177854
+                    |
+   is_fem_num#c.fab |
+               man  |  -.1555324    .020706    -7.51   0.000    -.1961155   -.1149494
+                    |
+is_fem_num#c.sexism |
+               man  |  -.2320728   .0243994    -9.51   0.000    -.2798948   -.1842508
+                    |
+is_fem_num#c.stem_c |
+               man  |   .0729828   .0214525     3.40   0.001     .0309367     .115029
+                    |
+              _cons |  -1.523474    .007306  -208.52   0.000    -1.537794   -1.509155
+-------------------------------------------------------------------------------------
+
+. 
+. margins, dydx(fab) at(is_fem_num==(0 1)) atmeans // average marginal effects
+
+Conditional marginal effects                    Number of obs     =    665,075
+Model VCE    : Robust
+
+Expression   : Pr(left_field_num), predict()
+dy/dx w.r.t. : fab
+
+1._at        : is_fem_num      =           0
+               fab             =   -2.61e-09 (mean)
+               sexism          =    1.25e-09 (mean)
+               stem_c          =    3.20e-09 (mean)
+
+2._at        : is_fem_num      =           1
+               fab             =   -2.61e-09 (mean)
+               sexism          =    1.25e-09 (mean)
+               stem_c          =    3.20e-09 (mean)
+
+------------------------------------------------------------------------------
+             |            Delta-method
+             |      dy/dx   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+fab          |
+         _at |
+          1  |     .05198   .0018607    27.94   0.000     .0483331    .0556269
+          2  |   .0785535   .0022989    34.17   0.000     .0740478    .0830593
+------------------------------------------------------------------------------
+
+. 
+. margins, dydx(fab) at(is_fem_num==(0 1)) pwcompare(effects) atmeans // compare average marginal effects
+
+Pairwise comparisons of conditional marginal effects
+
+Model VCE    : Robust                           Number of obs     =    665,075
+
+Expression   : Pr(left_field_num), predict()
+dy/dx w.r.t. : fab
+
+1._at        : is_fem_num      =           0
+               fab             =   -2.61e-09 (mean)
+               sexism          =    1.25e-09 (mean)
+               stem_c          =    3.20e-09 (mean)
+
+2._at        : is_fem_num      =           1
+               fab             =   -2.61e-09 (mean)
+               sexism          =    1.25e-09 (mean)
+               stem_c          =    3.20e-09 (mean)
+
+------------------------------------------------------------------------------
+             |   Contrast Delta-method    Unadjusted           Unadjusted
+             |      dy/dx   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+fab          |
+         _at |
+     2 vs 1  |   .0265736   .0029576     8.98   0.000     .0207769    .0323703
+------------------------------------------------------------------------------
+
+. 
+. // calculating the % reduction in gender x FAB coefficient due to sexism
+. /*
+> . display (.0443732 - .0265736)/ .0443732
+> .40113402
+> */
+. 
+. 
+. //////////////////////////
+> // Robustness check #1 //
+. /////////////////////////
+> 
+. // import data
+. 
+. import delimited using "03_robustness_check_1.csv", clear
+(10 vars, 112,132 obs)
+
+. 
+. // preparing the data for analysis
+. 
+. encode from_matched_field, gen(from_matched_field_num)
+
+. 
+. summarize stem
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+        stem |    112,132   -.0253719    .4303503         -1          1
+
+. generate stem_c = stem - r(mean)
+
+. summarize stem_c
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      stem_c |    112,132    4.77e-09    .4303503  -.9746281   1.025372
+
+. 
+. // main model
+. 
+. logit is_fem fab stem_c i.from_matched_field_num, vce(cluster oid)
+
+Iteration 0:   log pseudolikelihood = -71442.491  
+Iteration 1:   log pseudolikelihood = -66415.212  
+Iteration 2:   log pseudolikelihood = -66350.805  
+Iteration 3:   log pseudolikelihood = -66350.742  
+Iteration 4:   log pseudolikelihood = -66350.742  
+
+Logistic regression                             Number of obs     =    112,132
+                                                Wald chi2(31)     =    6548.91
+                                                Prob > chi2       =     0.0000
+Log pseudolikelihood = -66350.742               Pseudo R2         =     0.0713
+
+                                          (Std. Err. adjusted for 86,879 clusters in oid)
+-----------------------------------------------------------------------------------------
+                        |               Robust
+                 is_fem |      Coef.   Std. Err.      z    P>|z|     [95% Conf. Interval]
+------------------------+----------------------------------------------------------------
+                    fab |   -.464866   .0213634   -21.76   0.000    -.5067374   -.4229945
+                 stem_c |  -.3975629   .0182896   -21.74   0.000    -.4334099   -.3617158
+                        |
+ from_matched_field_num |
+           archaeology  |  -.1562927   .0833205    -1.88   0.061    -.3195979    .0070125
+           art history  |   .3005478   .1036323     2.90   0.004     .0974322    .5036634
+             astronomy  |  -.9970552   .6104523    -1.63   0.102     -2.19352    .1994092
+          biochemistry  |  -.9202169   .0635782   -14.47   0.000    -1.044828   -.7956059
+             chemistry  |   -1.05892   .0543716   -19.48   0.000    -1.165487   -.9523541
+              classics  |  -.2736681    .101469    -2.70   0.007    -.4725436   -.0747925
+        communications  |  -.1092066   .0616203    -1.77   0.076    -.2299802     .011567
+comparative literature  |  -.0195879   .1382662    -0.14   0.887    -.2905846    .2514088
+      computer science  |  -1.745406   .0599602   -29.11   0.000    -1.862926   -1.627886
+        earth sciences  |  -.7451833   .0753705    -9.89   0.000    -.8929067   -.5974599
+             economics  |  -.7725606   .0619215   -12.48   0.000    -.8939245   -.6511967
+             education  |   .1282132   .0553939     2.31   0.021     .0196432    .2367833
+           engineering  |   -1.72016   .0538184   -31.96   0.000    -1.825642   -1.614678
+    english literature  |  -.2319533   .0625498    -3.71   0.000    -.3545486    -.109358
+  evolutionary biology  |  -.3551095   .1570948    -2.26   0.024    -.6630097   -.0472093
+               history  |  -.4682227   .0580479    -8.07   0.000    -.5819946   -.3544509
+           linguistics  |  -.0592595   .0675437    -0.88   0.380    -.1916426    .0731237
+           mathematics  |  -1.565179   .0573335   -27.30   0.000     -1.67755   -1.452807
+middle eastern studies  |  -.7428479   .1857948    -4.00   0.000    -1.106999   -.3786969
+     molecular biology  |  -.6363557   .0808893    -7.87   0.000    -.7948958   -.4778156
+                 music  |  -.6273435   .1563231    -4.01   0.000     -.933731   -.3209559
+          neuroscience  |  -.6360608   .0799285    -7.96   0.000    -.7927179   -.4794038
+            philosophy  |  -1.219981   .0697668   -17.49   0.000    -1.356722   -1.083241
+               physics  |  -1.788132   .0553329   -32.32   0.000    -1.896583   -1.679682
+     political science  |  -.5587954   .0640812    -8.72   0.000    -.6843923   -.4331985
+            psychology  |   .2108518   .0552497     3.82   0.000     .1025644    .3191392
+             sociology  |  -.1903398   .0621037    -3.06   0.002    -.3120609   -.0686188
+    spanish literature  |   .0196859    .102042     0.19   0.847    -.1803127    .2196845
+            statistics  |  -1.159802   .0752037   -15.42   0.000    -1.307199   -1.012406
+                        |
+                  _cons |   .2143262   .0496066     4.32   0.000      .117099    .3115533
+-----------------------------------------------------------------------------------------
+
+. 
+. margins, dydx(fab) atmeans // average marginal effects
+
+Conditional marginal effects                    Number of obs     =    112,132
+Model VCE    : Robust
+
+Expression   : Pr(is_fem), predict()
+dy/dx w.r.t. : fab
+at           : fab             =    1.09e-10 (mean)
+               stem_c          =    4.77e-09 (mean)
+               1.from_mat~m    =    .0159812 (mean)
+               2.from_mat~m    =    .0070542 (mean)
+               3.from_mat~m    =    .0048336 (mean)
+               4.from_mat~m    =    .0001249 (mean)
+               5.from_mat~m    =    .0261745 (mean)
+               6.from_mat~m    =    .0933632 (mean)
+               7.from_mat~m    =    .0049674 (mean)
+               8.from_mat~m    =    .0267007 (mean)
+               9.from_mat~m    =    .0022741 (mean)
+               10.from_ma~m    =    .0563978 (mean)
+               11.from_ma~m    =    .0136625 (mean)
+               12.from_ma~m    =    .0378304 (mean)
+               13.from_ma~m    =    .0790586 (mean)
+               14.from_ma~m    =    .1619074 (mean)
+               15.from_ma~m    =    .0346645 (mean)
+               16.from_ma~m    =    .0015963 (mean)
+               17.from_ma~m    =    .0371794 (mean)
+               18.from_ma~m    =    .0178629 (mean)
+               19.from_ma~m    =    .0807709 (mean)
+               20.from_ma~m    =    .0012039 (mean)
+               21.from_ma~m    =    .0096583 (mean)
+               22.from_ma~m    =    .0017836 (mean)
+               23.from_ma~m    =    .0103985 (mean)
+               24.from_ma~m    =    .0333268 (mean)
+               25.from_ma~m    =     .115373 (mean)
+               26.from_ma~m    =    .0222952 (mean)
+               27.from_ma~m    =    .0592694 (mean)
+               28.from_ma~m    =    .0238112 (mean)
+               29.from_ma~m    =     .005003 (mean)
+               30.from_ma~m    =    .0154728 (mean)
+
+------------------------------------------------------------------------------
+             |            Delta-method
+             |      dy/dx   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         fab |  -.1010553   .0046387   -21.79   0.000    -.1101471   -.0919635
+------------------------------------------------------------------------------
+
+. 
+. 
+. //////////////////////////
+> // Robustness check #2 //
+. /////////////////////////
+> 
+. // import data -- ENTRY
+. 
+. import delimited using "01_entry.csv", clear 
+(11 vars, 3,251,828 obs)
+
+. 
+. // preparing the data for analysis
+. 
+. replace case="1" if case=="TRUE"
+(112,132 real changes made)
+
+. replace case="0" if case=="FALSE"
+(3,139,696 real changes made)
+
+. destring case, replace
+case: all characters numeric; replaced as byte
+
+. 
+. ren case selected
+
+. 
+. ren choice_op switch_no
+
+. 
+. encode is_fem_factor, gen(is_fem)
+
+. replace is_fem = 2 - is_fem
+(2,164,995 real changes made)
+
+. label define is_fem_label 0 "male" 1 "female"
+
+. label values is_fem is_fem_label
+
+. 
+. egen long oid_num = group(oid)
+
+. 
+. cmset oid_num switch_no to_matched_field
+panel data: panels oid_num and time switch_no
+note: case identifier _caseid generated from oid_num switch_no
+note: panel by alternatives identifier _panelaltid generated from oid_num to_matched_field
+note: alternatives are unbalanced across choice sets; at least one choice set does not have all possible values of to_matched_field
+
+                     caseid variable:  _caseid
+               alternatives variable:  to_matched_field
+      panel by alternatives variable:  _panelaltid (unbalanced)
+                       time variable:  switch_no, 1 to 8, but with gaps
+                               delta:  1 unit
+
+note: data have been xtset
+
+. 
+. // main model
+. 
+. clogit selected ib0.is_fem##(c.fab c.hw c.sme c.sel stem), group(_caseid)  vce(cluster oid_num)
+note: 1.is_fem omitted because of no within-group variance.
+
+Iteration 0:   log pseudolikelihood = -358131.26  
+Iteration 1:   log pseudolikelihood = -357511.33  
+Iteration 2:   log pseudolikelihood =  -357509.4  
+Iteration 3:   log pseudolikelihood =  -357509.4  
+
+Conditional (fixed-effects) logistic regression
+
+                                                Number of obs     =  3,251,828
+                                                Wald chi2(10)     =   24356.93
+                                                Prob > chi2       =     0.0000
+Log pseudolikelihood =  -357509.4               Pseudo R2         =     0.0532
+
+                           (Std. Err. adjusted for 86,879 clusters in oid_num)
+------------------------------------------------------------------------------
+             |               Robust
+    selected |      Coef.   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+      is_fem |
+     female  |          0  (omitted)
+         fab |   .1179999   .0117026    10.08   0.000     .0950632    .1409365
+          hw |  -.8387751   .0160568   -52.24   0.000    -.8702459   -.8073043
+         sme |  -.3491517   .0144882   -24.10   0.000     -.377548   -.3207554
+         sel |  -.9029281   .0099856   -90.42   0.000    -.9224995   -.8833566
+      1.stem |     1.6084   .0230581    69.75   0.000     1.563207    1.653593
+             |
+is_fem#c.fab |
+     female  |  -.9605039   .0188168   -51.04   0.000    -.9973842   -.9236237
+             |
+ is_fem#c.hw |
+     female  |    .209038   .0291731     7.17   0.000     .1518598    .2662161
+             |
+is_fem#c.sme |
+     female  |   .3543979   .0233643    15.17   0.000     .3086047    .4001911
+             |
+is_fem#c.sel |
+     female  |   .2582624   .0157718    16.37   0.000     .2273503    .2891745
+             |
+ is_fem#stem |
+   female#1  |  -1.202004   .0348469   -34.49   0.000    -1.270303   -1.133705
+------------------------------------------------------------------------------
+
+. 
+. 
+. // import data -- EXIT
+. 
+. import delimited using "02_exit.csv", clear
+(10 vars, 665,075 obs)
+
+. 
+. // preparing the data for analysis
+. 
+. encode stem, gen(stem_num)
+
+. label drop stem_num
+
+. 
+. replace stem_num = stem_num - 1
+(665,075 real changes made)
+
+. 
+. encode left_field, gen(left_field_num)
+
+. 
+. replace left_field_num = left_field_num - 1
+(665,075 real changes made)
+
+. label drop left_field_num
+
+. 
+. tab left_field left_field_num
+
+           |    left_field_num
+left_field |         0          1 |     Total
+-----------+----------------------+----------
+     FALSE |   552,943          0 |   552,943 
+      TRUE |         0    112,132 |   112,132 
+-----------+----------------------+----------
+     Total |   552,943    112,132 |   665,075 
+
+. 
+. encode is_fem, gen(is_fem_num)
+
+. 
+. replace is_fem_num = 2 - is_fem_num
+(462,380 real changes made)
+
+. 
+. label define stemnonstem 0 "non-STEM" 1 "STEM"
+
+. 
+. label define MF 0 "man" 1 "woman"
+
+. 
+. label values stem_num stemnonstem
+
+. 
+. label values is_fem_num MF
+
+. 
+. // main model
+. 
+. logit left_field_num ib0.is_fem_num##(c.fab c.hw c.sme c.sel stem_num), vce(cluster oid) 
+
+Iteration 0:   log pseudolikelihood = -301718.07  
+Iteration 1:   log pseudolikelihood = -297997.89  
+Iteration 2:   log pseudolikelihood = -297939.85  
+Iteration 3:   log pseudolikelihood = -297939.84  
+
+Logistic regression                             Number of obs     =    665,075
+                                                Wald chi2(11)     =    6016.55
+                                                Prob > chi2       =     0.0000
+Log pseudolikelihood = -297939.84               Pseudo R2         =     0.0125
+
+                                     (Std. Err. adjusted for 364,355 clusters in oid)
+-------------------------------------------------------------------------------------
+                    |               Robust
+     left_field_num |      Coef.   Std. Err.      z    P>|z|     [95% Conf. Interval]
+--------------------+----------------------------------------------------------------
+         is_fem_num |
+             woman  |   .0046051   .0229269     0.20   0.841    -.0403308     .049541
+                fab |   -.500354   .0162304   -30.83   0.000    -.5321651   -.4685429
+                 hw |  -.5634594   .0177582   -31.73   0.000    -.5982648    -.528654
+                sme |   .8262665   .0236261    34.97   0.000     .7799601    .8725728
+                sel |   .2222902   .0144802    15.35   0.000     .1939095     .250671
+                    |
+           stem_num |
+              STEM  |  -.2630489   .0183582   -14.33   0.000    -.2990304   -.2270674
+                    |
+   is_fem_num#c.fab |
+             woman  |   .5836659    .024623    23.70   0.000     .5354058     .631926
+                    |
+    is_fem_num#c.hw |
+             woman  |   .0833203   .0286502     2.91   0.004     .0271669    .1394736
+                    |
+   is_fem_num#c.sme |
+             woman  |  -.4745412   .0382783   -12.40   0.000    -.5495654    -.399517
+                    |
+   is_fem_num#c.sel |
+             woman  |  -.0776915   .0226288    -3.43   0.001    -.1220432   -.0333398
+                    |
+is_fem_num#stem_num |
+        woman#STEM  |   .1787832   .0336527     5.31   0.000      .112825    .2447413
+                    |
+              _cons |   -1.46752   .0130013  -112.88   0.000    -1.493002   -1.442038
+-------------------------------------------------------------------------------------
+
+. 
+. 
+. //////////////////////////////////////////////////////////
+> // Robustness checks #3 and #4 -- see GitHub repository //
+. //////////////////////////////////////////////////////////
+> 
+. log close
+      name:  <unnamed>
+  log type:  text
+ closed on:  27 Mar 2023, 14:32:37
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

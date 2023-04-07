@@ -1,0 +1,14 @@
+FIELD EXIT DATA
+VARIABLE LABELS
+
+oid: 				ORCID ID
+is_fem_factor: 		man = 0, woman = 1 
+from_matched_field:	an academic's current field
+stem: 			non-STEM = 0, STEM = 1
+fab: 				Field-Specific Ability Beliefs (scaled)
+sexism: 			perceived prejudice against women (scaled)
+hw:				hours worked on-campus (scaled; see Section 2 of the SOM)
+sme: 				systemizing/empathizing (scaled; see Section 2 of the SOM)
+sel: 				field selectivity (scaled; see Section 2 of the SOM)
+left_field: 		the academic left = TRUE, the academic stayed = FALSE
+

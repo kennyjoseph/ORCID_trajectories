@@ -1,0 +1,14 @@
+FIELD ENTRY DATA
+VARIABLE LABELS
+
+oid: 			ORCID ID
+is_fem_factor: 	man = 0, woman = 1 
+to_matched_field:	the field being entered
+stem: 		non-STEM = 0, STEM = 1
+fab: 			Field-Specific Ability Beliefs (scaled)
+sexism: 		perceived prejudice against women (scaled)
+hw:			hours worked on-campus (scaled; see Section 2 of the SOM)
+sme: 			systemizing/empathizing (scaled; see Section 2 of the SOM)
+sel: 			field selectivity (scaled; see Section 2 of the SOM)
+choice_op: 		the order of an academic's field entries (e.g., 2 = second field entry)
+case: 		field was selected/entered = TRUE, field was not selected/entered = FALSE

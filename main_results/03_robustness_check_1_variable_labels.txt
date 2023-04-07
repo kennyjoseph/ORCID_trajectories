@@ -1,0 +1,13 @@
+ROBUSTNESS CHECK #1 DATA
+VARIABLE LABELS
+
+oid: 				ORCID ID
+is_fem: 			man = 0, woman = 1 
+from_matched_field:	the field being exited
+to_matched_field:		the field being entered
+stem: 			STEM gradient
+fab: 				Field-Specific Ability Beliefs gradient (scaled)
+sexism: 			perceived prejudice against women gradient (scaled)
+hw:				hours worked on-campus gradient (scaled; see Section 2 of the SOM)
+sme: 				systemizing/empathizing gradient (scaled; see Section 2 of the SOM)
+sel: 				field selectivity gradient (scaled; see Section 2 of the SOM)
