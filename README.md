@@ -9,7 +9,7 @@ The one thing that is not provided is the raw data from ORCID.  For this, you'll
 
 Please open an issue if you have questions! Also, please note that in most cases, python code has been tested primarily in `python 3.6`.
 
-Finally, please note that all `data` directories are tarred and gzipped, please make sure to uncompress before attempting to replicate!
+Finally, please note that all `data` directories are tarred and gzipped, please make sure to uncompress before attempting to replicate!  Additionally, you will need to install [git-lfs](https://git-lfs.com/) and run `git lfs fetch` after cloning the repository to pull down the translated field names.
 
 # Main Results
 
