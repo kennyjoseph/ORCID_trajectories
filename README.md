@@ -2,7 +2,13 @@
 This repository contains the code and data needed to replicate the analyses presented in the paper *Field-specific Ability Beliefs as an Explanation for Gender Differences in Academics' Career Trajectories: Evidence from Public Profiles on ORCID.org* by Hannak, Joseph, Larremore, and Cimpian, forthcoming at JPSP.  If you use this code base or ideas from the paper, please consider citing us!
 
 ```
-CITATION COMING SOON!
+@article{hannak2023field,
+  title={Field-specific ability beliefs as an explanation for gender differences in academics’ career trajectories: Evidence from public profiles on ORCID. Org.},
+  author={Hannak, Aniko and Joseph, Kenneth and Larremore, Daniel B and Cimpian, Andrei},
+  journal={Journal of Personality and Social Psychology},
+  year={2023},
+  publisher={American Psychological Association}
+}
 ```
 
 The one thing that is not provided is the raw data from ORCID.  For this, you'll need to head over to the [public ORCID dumps](https://support.orcid.org/hc/en-us/articles/360006897394-How-do-I-get-the-public-data-file-).  See the section in this document labeled `raw` for how to access it! Then, run the scripts in ```data_processing``` to generate the files we use for our analyses. These analyses are carried out using code provided in other folders in this repository.  Details on all files in the repository are below.  
